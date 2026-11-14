@@ -1,10 +1,10 @@
 # Artwork restoration, desktop 1.3.0
 
-This release keeps content through 7.1 phase 2, the 700 ms black emblem hold and the 1600 ms character entrance. Existing saves, pity, guarantees, inventory, currency and backups retain their formats and locations.
+Desktop 1.3.0 kept content through 7.1 phase 2, a 700 ms black emblem hold and a 1600 ms character entrance. Existing saves, pity, guarantees, inventory, currency and backups retain their formats and locations.
 
 ## What changed
 
-553 artwork entries are tracked in artwork/manifest.json. The pass restores primary event banners, both Standard banner artworks, the Noelle introductory banner, custom-banner surfaces, character splashes, wish-card images and the main/elemental backgrounds. Standard and Noelle art are now 3200 pixels wide. Most event posters are 3200 pixels wide; three already large sources retain their original bytes. Small thumbnails used at thumbnail size and intentionally blurred gallery textures were not enlarged unnecessarily.
+`artwork/manifest.json` tracks 553 artwork entries. The pass restores primary event banners, both Standard banner artworks, the Noelle introductory banner, custom-banner surfaces, character splashes, wish-card images and the main/elemental backgrounds. Standard and Noelle art are now 3200 pixels wide. Most event posters are 3200 pixels wide; three already large sources retain their original bytes. Small thumbnails used at thumbnail size and intentionally blurred gallery textures were not enlarged unnecessarily.
 
 The offline Real-ESRGAN x4plus-anime model ran at 4x. Its output was downsampled to the delivery resolution and blended 60% with a conventional source resize. Original transparent edges were resized separately. This reduces visible compression and jagged edges while retaining some original texture; it cannot recover authentic detail absent from the source.
 
@@ -22,12 +22,12 @@ The pixels directly behind erased lettering are interpolated, not authentic reco
 
 - asset-provenance.json describes current delivered bytes.
 - upstream-asset-provenance.json preserves the original downloaded-file manifest.
-- artwork/originals.zip retains every original modified by the pass.
+- The reconstructed `artwork/originals.zip` contains every original modified by the pass. Its committed parts are under `artwork/`.
 - artwork/native-sources.json records original public replacement images and crop operations.
 - artwork/manifest.json records source/output hashes, sizes, model hash and settings.
 - artwork/letter-cleanup.json records the selective heading cleanup.
 
-Playing and rebuilding the application from the supplied processed assets require no AI software. Rebuilding follows DESKTOP.md. To regenerate the artwork, install the optional pinned Python dependencies from artwork/requirements.txt in a virtual environment, obtain the official Real-ESRGAN ncnn Vulkan executable and x4plus-anime model, and compare their hashes with artwork/manifest.json. Then run from the project directory:
+Playing and rebuilding the application from the supplied processed assets require no AI software. For the application build, see `DESKTOP.md`. To regenerate the artwork, install the optional pinned Python dependencies from artwork/requirements.txt in a virtual environment, obtain the official Real-ESRGAN ncnn Vulkan executable and x4plus-anime model, and compare their hashes with artwork/manifest.json. Then run from the project directory:
 
 ```powershell
 python scripts/prepare-artwork.py --upscaler C:/tools/realesrgan-ncnn-vulkan.exe --models C:/tools/models --cache ../audit/hd/cache

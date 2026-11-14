@@ -1,5 +1,6 @@
 # Collector's Journal verification
 
+This is a historical report for desktop 1.4.0. Its results describe the tested package, not a new test of the current checkout.
 Verified on 2026-10-31 against the Windows 1.4.0 package.
 
 ## Delivered
@@ -12,7 +13,7 @@ Verified on 2026-10-31 against the Windows 1.4.0 package.
 
 ## Automated verification
 
-All 30 Node tests passed, including the existing gacha, reveal/audio, banner, and native backup checks. New tests cover catalog deduplication, attainable collection thresholds, C6 and R5 boundaries, legacy-history limits, explicit ten-pull batches, custom/modified odds, persistent earned dates, title gating, replay protection, and interrupted-wish recovery.
+All 30 Node tests passed, including the existing wish, reveal audio, banner and native backup checks. New tests cover catalog deduplication, attainable collection thresholds, C6 and R5 boundaries, legacy-history limits, explicit ten-pull batches, custom/modified odds, persistent earned dates, title gating, replay protection, and interrupted-wish recovery.
 
 Production Vite build passed. The existing codebase emits unused-property, accessibility, and CSS warnings during builds. Packaging used the already-installed Electron 39.8.3 distribution, without downloading a different runtime.
 
@@ -35,4 +36,4 @@ No renderer page errors occurred. Screenshots were visually inspected for the ac
 
 ## Limits
 
-The new journal labels are English; album item names use the existing translations. A conflicting upstream weapon itemID follows the original inventory's first-match lookup, so it does not manufacture separate ownership for the two names. Older records cannot prove unmodified odds and therefore do not award Fortune achievements. A long manual play session and gamepad support were not tested.
+The new journal labels are English; album item names use the existing translations. A conflicting upstream weapon itemID follows the original inventory's first-match lookup, so it does not manufacture separate ownership for the two names. Older records cannot prove unmodified odds and therefore do not award Fortune achievements. The checks did not cover a long manual play session or gamepad support.

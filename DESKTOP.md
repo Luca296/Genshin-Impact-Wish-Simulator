@@ -1,6 +1,6 @@
 # Genshin Wish Offline
 
-Windows x64 desktop edition, with the deployed simulator's banners through **7.1, phase 2**, including Skirk and Escoffier. The game runs from bundled files in Electron 39.8.3. No Node.js installation or development server is needed to play.
+This Windows x64 edition includes the deployed simulator's banners through 7.1 phase 2, including Skirk and Escoffier. Electron 39.8.3 runs the bundled game files. Players do not need Node.js or a development server.
 
 ## Character and weapon progression
 
@@ -54,7 +54,7 @@ The desktop importer accepts the upstream JSON backup format, including `.bin`, 
 
 Membership keys are not restored as entitlements. Custom banners with embedded `data:` artwork work offline. A cloud-only banner or remote image URL cannot be recovered without that artwork; export or recreate the banner locally in the original simulator first. Settings tied to an older banner-storage version can select the desktop's default 7.1 banner on import, while retaining inventory, history, currency, pity and guarantees.
 
-Online publishing is replaced by a local backup export from the editor. This exports the complete save, including its banners. Importing replaces the destination save; it does not merge two inventories. The original free limit of three locally created custom banners remains. No premium access or protected content is enabled.
+Online publishing is replaced by a local backup export from the editor. This exports the complete save, including its banners. Importing replaces the destination save; it does not merge two inventories. The editor retains the original limit of three locally created custom banners. No premium access or protected content is enabled.
 
 ## Rebuild
 
@@ -85,7 +85,7 @@ The optional system-loopback sound test also needs Python and `PyAudioWPatch`: `
 
 ## Versions and credits
 
-See `VERSION-AUDIT.md`, `THIRD-PARTY-NOTICES.md` and the retained upstream `LICENSE`. Help → Credits and licenses displays the asset and source credits in the app. The original upstream README is retained as `README.md`.
+See `VERSION-AUDIT.md`, `THIRD-PARTY-NOTICES.md` and the retained upstream `LICENSE`. Help → Credits and licenses displays the asset and source credits in the app. The project overview is in `README.md`. The upstream source revision is identified in `VERSION-AUDIT.md`.
 
 ## Reveal quality checks
 

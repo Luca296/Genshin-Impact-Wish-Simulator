@@ -1,18 +1,12 @@
-# Guide to Add new Locale
+# Add a locale
 
-1. To add a language, just duplicate `en-US.json`, rename to your locale then edit it, change everythings that need to change.
-2. Some languages keep character and weapon names in English, if the language you want to add has its own name for the characters/weapons you can localize it by duplicating the `en-US.json` file from the `items` folders too.
-3. Then open `/src/lib/data/country.json`, insert the Locale Name and Flag here. You can take the base46 flag from this gist [https://gist.github.com/CodeTheInternet/9312404](https://gist.githubusercontent.com/CodeTheInternet/9312404/raw/4987ca07c4032bb6262a65794f428b350e1d86a1/gistfile1.json)
-4. Last Step, navigate to `/src/lib/helpers/i18n.js`. Insert the new locale into `supportedLocales` array, if you have localized characters/weapons too, insert the new locale name to `itemLocales` array as well.
-   https://github.com/AguzzTN54/Genshin-Impact-Wish-Simulator/blob/121bcf712dcab9b55c9b87a708a7ef889def879a/src/lib/helpers/i18n.js#L4-L5
+1. Copy `en-US.json` in this directory to a file named for the new locale. Translate the values and keep the JSON keys and placeholders intact.
+2. If character and weapon names need translation, copy `items/en-US.json` to the same locale name under `items` and translate those values.
+3. Add the language name and flag to `src/lib/data/country.json`.
+4. Add the locale to `supportedLocales` in `src/lib/helpers/i18n.js`. Add it to `itemLocales` there if you supplied item names.
+5. Run `npm run check` and `npm run build`, then select the language in the app and check the translated screens. Journal and progression labels include English-only text.
 
-If you are not familiar with javascript especially sveltekit or don't know how to use github and can't do development, don't worry, you can still contribute just by creating a new json file based on `en-US.json` and attach it in [new issue](https://github.com/AguzzTN54/Genshin-Impact-Wish-Simulator/issues/new), next I will combine it with the main program. I really appreciate your works.
-
----
-
-## It might take a long time to type all the text manually, so here are some links from the official site that you can open and copy the text
-
-> Replace `LANGUAGE` with language that you want to add, such as **en**, **es**, **fr**, **vi**, **ja**, **th** or others language that available in Genhsin Impact game.
+The following official wish detail pages can be used as references. Replace `LANGUAGE` in the example URLs with a supported language code. Their content and availability may change.
 
 1. [Beginners' Wish](https://webstatic-sea.hoyoverse.com/genshin/event/e20190909gacha/index.html?lang=en&region=os_asia#/newbiegacha)
    ```
@@ -37,7 +31,8 @@ If you are not familiar with javascript especially sveltekit or don't know how t
    https://gs.hoyoverse.com/genshin/event/e20190909gacha-v3/index.html?gacha_id=8b10b48c52dd6870f92d72e9963b44bb8968ed2f&lang=LANGUAGE&region=os_asia#/
    ```
 
-## Thanks to all contributors who have carried out localization
+
+## Translation contributors
 
 <table>
    <thead>

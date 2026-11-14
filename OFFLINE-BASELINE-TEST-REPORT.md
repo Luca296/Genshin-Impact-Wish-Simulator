@@ -1,5 +1,6 @@
 # Test report
 
+This is a historical report for desktop 1.0.0. Its results describe the tested package, not a new test of the current checkout.
 Tested on Windows x64 on 2026-10-31. Desktop version 1.0.0, Electron 39.8.3, simulator content through **7.1 phase 2**.
 
 ## Passed
@@ -32,7 +33,7 @@ The first packaged attempt exposed a conflict between Electron's file-fetch help
 ## Limits and migration notes
 
 - Network isolation was enforced and tested **inside the application**, using Chromium request blocking, CSP, disabled background networking/DNS resolution, a dead-end proxy, and disabled main-process network APIs. The session lacked Windows administrator rights, so an independent Windows Firewall block or OS packet-capture test for every Electron utility process was **not performed**. The stricter OS-level isolation verification remains unverified.
-- The live hosted game's browser visit remained on “Connecting” here. Its publicly delivered HTML, scripts, data and artwork were inspected, but full live-site gameplay comparison was unavailable. `VERSION-AUDIT.md` identifies exactly what the desktop uses.
+- The live hosted game's browser visit remained on "Connecting" here. Its publicly delivered HTML, scripts, data and artwork were inspected, but full live-site gameplay comparison was unavailable. `VERSION-AUDIT.md` identifies exactly what the desktop uses.
 - Very old name-only backups without numeric item IDs are rejected. Membership entitlements are not imported. Cloud-only artwork cannot be reconstructed offline. Import replaces rather than merges progress. The free three-banner creation limit remains.
 - Audio evidence is machine playback telemetry, system-loopback capture and model-assisted analysis, not human listening or a physical-speaker test. System loopback can include other applications; the game's own audible state was checked independently.
 - Backup file-selection dialogs were stubbed during automated UI tests. The actual IPC file-writing/reading and restore logic ran; manual browsing of those native dialogs was not separately exercised.

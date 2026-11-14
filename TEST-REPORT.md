@@ -1,10 +1,11 @@
 # Artwork and blended banner update, desktop 1.3.0
 
+This is a historical report for desktop 1.3.0. Its results describe the tested package, not a new test of the current checkout.
 Windows x64 verification on 2026-10-31. Simulator content remains 7.1 phase 2, including Skirk and Escoffier. Wish odds, pity, guarantees, inventory, currency, history and save formats were not changed.
 
 ## Delivered changes
 
-- 553 artwork entries tracked with source/output hashes. 508 use the conservative local restoration directly, 18 additionally have old heading lettering cleaned before restoration, 21 use public native originals, three are documented crops from existing originals, and three already large images retain their original bytes.
+- The artwork manifest records source and output hashes for 553 entries. Of these, 508 use the restoration directly, 18 also have heading lettering cleaned, 21 use public native originals, three use documented crops and three retain their original bytes.
 - Standard and Noelle introductory artwork are explicitly included at 3200 px width, alongside primary event art, character splashes, wish cards, custom-banner surfaces and main/elemental backgrounds.
 - Original blended white fades are retained. There is no opaque white panel over the event artwork. Selective heading cleanup preserves every unmasked pixel before the restoration pass; its masks and output hashes are recorded.
 - All 18 newer poster headings, availability/event labels and nameplates use live Genshin-font text, with source-specific positions. Four new headings have English fallbacks where upstream had supplied only baked English text. UI labels were checked in all 13 bundled interface languages.
@@ -23,7 +24,7 @@ All 18 rebuilt banners and all 13 bundled interface languages were exercised in 
 
 The 14 packaged elemental checks passed for all seven elements, natural meteor playback, skipping, consecutive five-stars, multi-wish summary, auto-skip, reduced motion, and original lower-rarity/weapon presentation. All 12 gameplay/save/backup checks passed, including wishes, inventory, currency/history/pity changes, early/late banner types, backup export/import, automatic restore and reopen persistence. Six custom-banner/editor/persistence/backup checks passed. Three additional custom-element, small-window and muted-playback checks passed. The five-size layout/path test also passed on the corrected build. Windows native media commands still leave the meteor playing; the measured reveal was approximately 703 ms until color and 1607 ms until full artwork, with saves intact after reopening.
 
-No uncaught errors, missing local images or attempted external renderer requests occurred in the passing checks. Expected canceled video range requests from seeking/resetting are retained in raw logs. Tests were rerun after correcting test timing and the native-card renderer; only the final passing results support this report.
+The passing checks recorded no uncaught errors, missing local images or attempted external renderer requests. Expected canceled video range requests from seeking/resetting are retained in raw logs. Tests were rerun after correcting test timing and the native-card renderer; only the final passing results support this report.
 
 ## Evidence and limitations
 

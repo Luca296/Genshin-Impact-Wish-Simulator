@@ -1,3 +1,5 @@
+# Third-party notices
+
 Genshin Wish Offline is based on Mantan21/Genshin-Impact-Wish-Simulator, revision d7d1870df7f2b168e37affdfadb43ba9da75857a. Source code copyright AguzzTN54 and contributors, MIT license, reproduced in LICENSE.
 
 Genshin Impact artwork, character and weapon images, icons, fonts, music, sound effects and game recordings belong to HoYoverse and their respective rightsholders. Upstream credits Hoyo Wiki, Genshin Fandom Wiki, Honey Impact, and recordings from the game with modifications. The original media originate from that repository and the public deployment; desktop artwork transformations are recorded below. The MIT code license does not establish an MIT license for HoYoverse assets. This fan application is not affiliated with HoYoverse.
@@ -14,6 +16,6 @@ Desktop 1.2.0 reuses the upstream splash and seven element-background images as 
 
 Desktop 1.3.0 restores primary banner, splash, card, custom-banner and background artwork using the offline Real-ESRGAN x4plus-anime model, downsampled and blended with the source. Real-ESRGAN code is BSD-3-Clause: https://github.com/xinntao/Real-ESRGAN . The processor and model are not runtime dependencies and are not shipped in the player build. These restorations do not change ownership of HoYoverse artwork.
 
-Additional native wish cards and portraits were downloaded from the public https://enka.network/ui/ asset cache. Source identifiers, exact URLs, hashes, dimensions, crop operations and restoration settings are recorded in artwork/native-sources.json and artwork/manifest.json in the source release. Sandrone's card and portrait use documented crops from the already bundled splash. Preserved originals are in artwork/originals.zip. No membership-only or protected media were accessed.
+Additional native wish cards and portraits were downloaded from the public https://enka.network/ui/ asset cache. Source identifiers, exact URLs, hashes, dimensions, crop operations and restoration settings are recorded in artwork/native-sources.json and artwork/manifest.json in the source release. Sandrone's card and portrait use documented crops from the already bundled splash. The preserved originals can be reconstructed as `artwork/originals.zip` from its committed parts. No membership-only or protected media were accessed.
 
 For the 18 newer event posters, old heading ink was selectively inpainted before restoration so native text can sit on the original blended background without an opaque cover. OpenCV is an optional build-time tool only; it is not part of the player runtime. Recorded masks and hashes are in artwork/letter-cleanup.json.

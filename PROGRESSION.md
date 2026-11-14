@@ -1,6 +1,6 @@
 # Character and weapon progression
 
-Version 1.5.0 adds manual upgrades, individual weapon copies, equipment, and character menus based on Genshin's in-game layouts. The UI uses element-colored star fields, original constellation diagrams and icons, the existing character artwork, talent detail panels, weapon comparison cards, and material selection. It uses 2D artwork rather than interactive 3D character models.
+Desktop 1.5.0 adds manual upgrades, individual weapon copies, equipment and character menus based on Genshin's in-game layouts. The UI uses element-colored star fields, original constellation diagrams and icons, the existing character artwork, talent detail panels, weapon comparison cards, and material selection. It uses 2D artwork rather than interactive 3D character models.
 
 ## Saves and migration
 
@@ -29,7 +29,7 @@ Normal builds use the committed JSON and bundled images. `scripts/import-combat-
 
 ## Infinite ranks
 
-- C0–C6 and R1–R5 retain the source values. C7+ repeats the six slots; each slot's strength is `1 + floor((C - slot) / 6)` once unlocked.
+- C0 through C6 and R1 through R5 retain the source values. C7+ repeats the six slots; each slot's strength is `1 + floor((C - slot) / 6)` once unlocked.
 - Numeric constellation bonuses accumulate additively. Talent-level increases repeat. Mechanical unlocks occur once. Repeating a purely mechanical slot can therefore provide no additional numerical benefit.
 - R6+ continues each passive value's R4-to-R5 increment. Probability values stop at 100%, and decreasing proc cooldowns stop at 0.1 seconds. Weapon base ATK and secondary stats depend on level, not refinement.
 - Talent coefficients beyond the source table continue its final recorded increment. These overflow rules are simulator extensions, not official Genshin ranks.
@@ -41,7 +41,7 @@ Attributes use real level and ascension curves, the exact equipped weapon copy's
 
 Damage previews calculate individual recognized ATK-, HP-, DEF- or EM-scaling hits, multiple-hit sums and slash-separated variants, crit and average damage, enemy defense, defense reduction/ignore, and resistance. Selected numeric effect clauses affect matching stats or talent groups. Homa's HP conversion and applicable skill/burst ATK conversions are evaluated directly. Kokomi's innate crit/healing adjustment is permanent.
 
-This is not a complete rotation/team/reaction simulator. Complex kit state, reaction damage, stack timing, team-only effects and unrecognized effect clauses require explicit build modifiers. The UI exposes applied conditional modifiers; it does not silently infer every effect from prose. Raw talent attributes remain available when a damage formula cannot be evaluated safely.
+The damage preview does not simulate complete rotations, teams or reactions. Complex kit state, reaction damage, stack timing, team-only effects and unrecognized effect clauses require explicit build modifiers. The UI exposes applied conditional modifiers; it does not silently infer every effect from prose. Raw talent attributes remain available when a damage formula cannot be evaluated safely.
 
 ## Verification
 
