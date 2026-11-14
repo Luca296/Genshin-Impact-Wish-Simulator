@@ -266,7 +266,9 @@
 			"etc": "etc.",
 			"probIncreased": "Chance d'obtention augmentée !",
 			"eventNote": "Les personnages 5* exclusifs de l'événement ne peuvent qu'être obtenus pendant une période limitée par le biais de vœux spécifiques. Pour en savoir plus, rendez-vous dans les détails de l'événement.",
-			"viewDetails": "Pour en savoir plus, rendez-vous dans les détails de l'événement."
+			"viewDetails": "Pour en savoir plus, rendez-vous dans les détails de l'événement.",
+			"newWishAvailable": "Nouveaux vœux disponibles",
+			"weaponEventLabel": "Vœux d'armes"
 		},
 		"result": {
 			"skip": "Passer",

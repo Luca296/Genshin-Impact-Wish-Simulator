@@ -23,19 +23,32 @@
 	$: ({ useOutfit = false, outfitName = '', images = {} } = itemdata);
 	const bg = custom ? $assets[`${rarity}star-special.webp`] : $assets[`${rarity}star-bg.webp`];
 
-	let countInfo = `R${qty > 5 ? `5 + ${qty - 5}` : qty}`;
+	let countInfo = `R${itemdata.refinement || 1}`;
 	if (type === 'character') {
-		countInfo = `C${qty > 7 ? `6 + ${qty - 7}` : qty - 1}`;
+		countInfo = `C${itemdata.activated || 0}`;
 	}
 
 	const pickItem = getContext('showDetail');
 	const handleShowDetails = () => {
 		if (!pickItem) return;
-		pickItem(itemID);
+		pickItem(itemID, itemdata.copyID);
 	};
 </script>
 
-<div class="content" class:owned={isOwned} on:mousedown={handleShowDetails}>
+<div
+	class="content"
+	class:owned={isOwned}
+	role="button"
+	tabindex="0"
+	aria-label={`${localName} ${isOwned ? countInfo : 'not owned'}`}
+	on:keydown={(e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			handleShowDetails();
+		}
+	}}
+	on:click={handleShowDetails}
+>
 	{#if !isOwned}
 		<div class="overlay" />
 	{/if}
@@ -76,7 +89,7 @@
 				on:error={(e) => e.target.remove()}
 			/>
 		{/if}
-		{#if qty > 1}
+		{#if isOwned}
 			<span class="qty"> {countInfo} </span>
 		{/if}
 	</picture>

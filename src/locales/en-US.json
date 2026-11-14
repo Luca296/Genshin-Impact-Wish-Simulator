@@ -100,7 +100,11 @@
 		"twirling-lotus": "#Twirling# Lotus",
 		"viridescent-vigil": "Viridescent #Vigil#",
 		"void-stars-advent": "#Void Star's# Advent",
-		"ya-hoho-compendium": "#Ya-Hoho!# Compendium"
+		"ya-hoho-compendium": "#Ya-Hoho!# Compendium",
+		"to-the-looking-glass-the-mademoiselle-said": "#To the Looking-Glass#, the Mademoiselle Said",
+		"swans-shadow-in-silken-ice": "Swan's Shadow in #Silken Ice#",
+		"when-warm-winds-cavort": "When #Warm Winds# Cavort",
+		"surging-ballad": "#Surging# Ballad"
 	},
 	"editor": {
 		"bannerConfig": "{banner} Configuration",
@@ -266,7 +270,9 @@
 			"etc": "etc.",
 			"probIncreased": "Probability increased !",
 			"eventNote": "5-Star event-exclusive characters can only be obtained in the specified wish during the specified time period(s).",
-			"viewDetails": "View Details for more."
+			"viewDetails": "View Details for more.",
+			"newWishAvailable": "New Wish Available",
+			"weaponEventLabel": "Weapon Event Wish"
 		},
 		"result": {
 			"skip": "Skip",

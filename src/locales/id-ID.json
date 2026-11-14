@@ -266,7 +266,9 @@
 			"etc": "dll.",
 			"probIncreased": "Kesempatan untuk memperoleh ditingkatkan !",
 			"eventNote": "Karakter 5★ Eksklusif hanya dapat diperoleh di Event Permohonan tertentu selama periode event.",
-			"viewDetails": "Tekan Rincian untuk info lebih lanjut."
+			"viewDetails": "Tekan Rincian untuk info lebih lanjut.",
+			"newWishAvailable": "Permohonan Baru Tersedia",
+			"weaponEventLabel": "Permohonan Senjata"
 		},
 		"result": {
 			"skip": "Lewati",

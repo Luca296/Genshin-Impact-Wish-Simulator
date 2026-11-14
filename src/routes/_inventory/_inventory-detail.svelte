@@ -12,6 +12,8 @@
 	import ScreenshotShare from '../_index/ScreenshotShare.svelte';
 	import OutfitToggle from './_outfit-toggle.svelte';
 	import SplashArt from '../_custom-banner/SplashArtEditor/SplashArt.svelte';
+	import ProgressionPanel from './ProgressionPanel.svelte';
+	import { owneditem } from '$lib/helpers/dataAPI/api-localstore';
 
 	export let itemID;
 	export let useOutfit = false;
@@ -27,6 +29,8 @@
 	export let isOwned = true;
 	export let images = {};
 	export let offset = {};
+	export let copyID;
+	let view = 'stats';
 
 	let hideInfo = false;
 	setContext('toggleInfoHide', () => {
@@ -45,20 +49,11 @@
 	const closeDetail = getContext('closeDetail');
 	setContext('preview', (val) => (onshot = val));
 
-	const getQtyInfo = (type, qty) => {
-		if (type === 'weapon') {
-			const refineExtra = $t(`inventory.extra`, { values: { count: `5 + ${qty - 5}` } });
-			const info = $t(`inventory.refinement`, {
-				values: { count: qty > 5 ? refineExtra : qty }
-			});
-			return info;
-		}
-
-		const refineExtra = $t(`inventory.extra`, { values: { count: `6 + ${qty - 7}` } });
-		const info = $t(`inventory.constellation`, {
-			values: { count: qty > 7 ? refineExtra : qty - 1 }
-		});
-		return info;
+	const getQtyInfo = (type) => {
+		const current = owneditem.get(itemID);
+		if (type === 'character')
+			return `C${current.activated || 0} · ${current.materials || 0} Stela Fortuna`;
+		return `R${current.copies?.find((c) => c.id === copyID)?.refinement || 1}`;
 	};
 
 	const getArtURL = (outfitName) => {
@@ -85,46 +80,78 @@
 	onDestroy(() => hotkeys.deleteScope('itemdetail', 'inventory'));
 </script>
 
-<SplashArt
-	character={name}
-	artURL={getArtURL(outfitName)}
-	position={offset}
-	preview
-	isCustom={custom}
-	{weaponType}
-	{localName}
-	{vision}
-	{onshot}
-	{isOwned}
-	{rarity}
-	{hideInfo}
-	on:close={closeDetail}
-/>
+{#if view === 'stats'}
+	<ProgressionPanel
+		{images}
+		{useOutfit}
+		{outfitName}
+		{itemID}
+		{copyID}
+		{name}
+		{localName}
+		{type}
+		{vision}
+		{rarity}
+		{custom}
+		on:select
+		on:close={closeDetail}
+		on:art={() => (view = 'art')}
+	/>
+{:else}
+	<button class="back-to-stats" on:click={() => (view = 'stats')}>Attributes & upgrades</button>
+	<SplashArt
+		character={name}
+		artURL={getArtURL(outfitName)}
+		position={offset}
+		preview
+		isCustom={custom}
+		{weaponType}
+		{localName}
+		{vision}
+		{onshot}
+		{isOwned}
+		{rarity}
+		{hideInfo}
+		on:close={closeDetail}
+	/>
 
-{#if !hideInfo}
-	<div transition:fade={{ duration: 250 }} class="handler-container">
-		<div class="wrapper">
-			{#if type === 'character'}
-				<OutfitToggle charName={name} />
-			{/if}
+	{#if !hideInfo}
+		<div transition:fade={{ duration: 250 }} class="handler-container">
+			<div class="wrapper">
+				{#if type === 'character'}
+					<OutfitToggle charName={name} />
+				{/if}
 
-			{#if qty > 0}
-				<div class="detail">
-					<span class="qty"> {getQtyInfo(type, qty)} </span>
-					<small> {$t('inventory.firstSummon', { values: { date: time } })} </small>
-				</div>
-			{/if}
+				{#if qty > 0}
+					<div class="detail">
+						<span class="qty"> {getQtyInfo(type)} </span>
+						<small> {$t('inventory.firstSummon', { values: { date: time } })} </small>
+					</div>
+				{/if}
 
-			{#if qty > 0}
-				<div class="share">
-					<ScreenshotShare />
-				</div>
-			{/if}
+				{#if qty > 0}
+					<div class="share">
+						<ScreenshotShare />
+					</div>
+				{/if}
+			</div>
 		</div>
-	</div>
+	{/if}
 {/if}
 
 <style>
+	.back-to-stats {
+		position: fixed;
+		left: 5%;
+		top: 5%;
+		z-index: 30;
+		padding: 12px 20px;
+		border: 1px solid #e5d1a2;
+		border-radius: 6px;
+		color: #fff1cc;
+		background: #203348;
+		cursor: pointer;
+	}
 	.handler-container {
 		width: 100%;
 		height: 100%;

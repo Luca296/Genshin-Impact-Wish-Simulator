@@ -1,6 +1,7 @@
 import { browser } from '$app/environment';
 import { Howl } from 'howler';
 import { localConfig } from '../dataAPI/api-localstore';
+import { createRevealAudio } from './reveal-session';
 
 import camera from './camera';
 import changebanner from './changebanner';
@@ -57,19 +58,28 @@ const soundInit = () => {
 };
 soundInit();
 
-export const playSfx = (sfxName = 'click') => {
+// Reuse the original wish ambience quietly, independently from menu music.
+// Its bed overlaps the meteor tail and continues underneath the result.
+export const revealAudio = browser ? createRevealAudio({
+	bed: new Howl({ src: [source.wishBacksound], loop: true }),
+	impact: new Howl({ src: [source.reveal5Star] }),
+	isMuted: () => localConfig.get('muted')
+}) : null;
+
+export const playSfx = (sfxName = 'click', { seek = 0 } = {}) => {
 	if (localConfig.get('muted')) return;
 	try {
 		if (!sounds[sfxName]) throw new Error('No Sound effect for ' + sfxName);
 		if (sfxName === 'wishBacksound' && sounds[sfxName].playing()) return;
-		return sounds[sfxName].play();
+		const id = sounds[sfxName].play();
+		if (seek > 0) sounds[sfxName].seek(seek, id);
+		return id;
 	} catch (e) {
 		console.error('Unable to Play Sfx : ', e.message);
 	}
 };
 
 export const pauseSfx = (sfxName) => {
-	if (localConfig.get('muted')) return;
 	try {
 		if (sfxName.includes('reveal')) return sounds[sfxName].stop();
 		sounds[sfxName].pause();

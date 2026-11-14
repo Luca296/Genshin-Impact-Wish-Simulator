@@ -36,9 +36,7 @@
 	<section bind:clientHeight={contentHeight} style="--modalHeight:{contentHeight}px">
 		<p class="sp">
 			{$t('fanmade')} <br />
-			{#if !$isPWA}
-				<a href="/install">{$t('installInstruction')}</a>
-			{/if}
+			
 		</p>
 		{#if !browserDetect().isSupported && isPWA}
 			<div class="updates adExpired">

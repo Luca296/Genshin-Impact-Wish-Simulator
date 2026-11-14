@@ -18,6 +18,9 @@
 	import InventoryList from './_inventory-list.svelte';
 	import InventoryDetail from './_inventory-detail.svelte';
 	import { cookie } from '$lib/helpers/dataAPI/api-cookie';
+	import { data as characters } from '$lib/data/characters.json';
+	import { data as weapons } from '$lib/data/weapons.json';
+	import { owneditem } from '$lib/helpers/dataAPI/api-localstore';
 
 	let headerHeight = 0;
 	let activeItem = cookie.get('inventoryTab') || 'character';
@@ -47,9 +50,23 @@
 
 	let detailItem = {};
 	let showInventoryDetail = false;
-	const showDetail = (itemID) => {
+	const showDetail = (itemID, copyID) => {
 		playSfx('collectionitem');
-		const data = $itemList.find(({ itemID: id }) => itemID === id);
+		let data = $itemList.find(({ itemID: id, copyID: copy }) => itemID === id && copyID === copy);
+		if (!data) {
+			const entry = [...characters, ...weapons].find((x) => x.itemID === itemID);
+			if (!entry) return;
+			const owned = owneditem.get(itemID);
+			const type = entry.weaponType ? 'weapon' : 'character';
+			data = {
+				...entry,
+				type,
+				qty: owned.qty,
+				isOwned: owned.qty > 0,
+				copyID,
+				localName: $t(type === 'weapon' ? entry.name : `${entry.name}.name`)
+			};
+		}
 		detailItem = data;
 		showInventoryDetail = true;
 	};
@@ -67,7 +84,12 @@
 </svelte:head>
 
 {#if showInventoryDetail}
-	<InventoryDetail {...detailItem} />
+	{#key `${detailItem.itemID}:${detailItem.copyID || ''}`}
+		<InventoryDetail
+			{...detailItem}
+			on:select={({ detail }) => showDetail(detail.itemID, detail.copyID)}
+		/>
+	{/key}
 {/if}
 
 <section id="inventory">

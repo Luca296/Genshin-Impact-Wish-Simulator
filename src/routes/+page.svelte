@@ -18,6 +18,8 @@
 	import WelkinCheckin from './_index/WelkinCheckin.svelte';
 	import PreloadMeteor from './_index/PreloadMeteor.svelte';
 	import MainWish from './_wish/index.svelte';
+	import Journal from './_journal/index.svelte';
+	import JournalNotice from './_journal/Notice.svelte';
 
 	let status = '';
 	let pageActive = 'index';
@@ -212,6 +214,8 @@
 	<svelte:component this={GachaInfo} page="history" />
 
 	<!-- Inventory -->
+{:else if pageActive === 'journal'}
+	<Journal />
 {:else if pageActive === 'inventory'}
 	<svelte:component this={Inventory} />
 
@@ -246,6 +250,8 @@
 {/if}
 
 <PreloadMeteor />
+
+<JournalNotice />
 
 <style>
 	video {

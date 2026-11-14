@@ -266,7 +266,9 @@
 			"etc": "etc.",
 			"probIncreased": "Höhere Wahrscheinlichkeit!",
 			"eventNote": "Die limitierten Figuren mit fünft Sternen gibt es nur während des jeweiligen Aktionszeitraums über das entsprechende Gebet.",
-			"viewDetails": "Wähle 'Details', um mehr zu erfahren."
+			"viewDetails": "Wähle 'Details', um mehr zu erfahren.",
+			"newWishAvailable": "Neues Gebet verfügbar",
+			"weaponEventLabel": "Waffen-Aktionsgebet"
 		},
 		"result": {
 			"skip": "Überspringen",

@@ -5,7 +5,7 @@
 	import hotkeys from 'hotkeys-js';
 
 	import { localConfig } from '$lib/helpers/dataAPI/api-localstore';
-	import { playSfx } from '$lib/helpers/audio/audio';
+	import { playSfx, revealAudio } from '$lib/helpers/audio/audio';
 	import { assets } from '$lib/store/app-stores';
 	import { pushToast } from '$lib/helpers/toast';
 
@@ -31,6 +31,10 @@
 	};
 
 	onMount(() => {
+		videoContent.addEventListener('timeupdate', () => {
+			if (show && rarity === 5 && videoContent.duration - videoContent.currentTime < .95)
+				revealAudio.startBed();
+		});
 		videoContent.addEventListener('ended', () => {
 			videoContent.style.display = 'none';
 			videoContent.load();

@@ -266,7 +266,9 @@
 			"etc": "など",
 			"probIncreased": "出現確率アップ！",
 			"eventNote": "イベント限定★5キャラクターは確率UP期間中にそれぞれの祈願からしか獲得できません。",
-			"viewDetails": "具体的な内容は【詳細】から確認できます。"
+			"viewDetails": "具体的な内容は【詳細】から確認できます。",
+			"newWishAvailable": "新たな祈願開催中",
+			"weaponEventLabel": "イベント祈願・武器"
 		},
 		"result": {
 			"skip": "スキップ",
@@ -610,6 +612,10 @@
 		"inputKeyTxt": "キーを入力して特典を獲得",
 		"checkingKey": "保存されたキーの検証中",
 		"benefit": "特典",
-		"authorNotes": ["広告の除去", "無制限の自作祈願", "{HSRWishSim} でも同じキーで特典を得られます"]
+		"authorNotes": [
+			"広告の除去",
+			"無制限の自作祈願",
+			"{HSRWishSim} でも同じキーで特典を得られます"
+		]
 	}
 }

@@ -1,3 +1,8 @@
+import { data as weaponCatalog } from '$lib/data/weapons.json';
+import equipmentClasses from '$lib/data/equipment-classes.json';
+import { normalizeRecord, materials, activate, refine } from '../progression/engine';
+const weaponIDs = new Set(weaponCatalog.map((x) => x.itemID));
+
 export const storageLocal = {
 	getData() {
 		const data = localStorage.getItem('WishSimulator.App');
@@ -20,12 +25,13 @@ export const storageLocal = {
 	initEvent() {
 		const localStore = localStorage.setItem;
 		localStorage.setItem = function (key) {
+			const result = localStore.apply(this, arguments);
 			if (key === 'WishSimulator.App') {
 				const event = new Event('storageUpdate');
 				document.dispatchEvent(event);
 			}
 
-			localStore.apply(this, arguments);
+			return result;
 		};
 	}
 };
@@ -108,6 +114,13 @@ export const localConfig = {
 export const owneditem = {
 	getAll() {
 		const items = storageLocal.get('ownedItem');
+		let changed = false;
+		for (const [id, record] of Object.entries(items)) {
+			if (record.progressionVersion === 2) continue;
+			items[id] = normalizeRecord(record, id, weaponIDs.has(Number(id)) ? 'weapon' : 'character');
+			changed = true;
+		}
+		if (changed) storageLocal.set('ownedItem', items);
 		return items;
 	},
 
@@ -116,20 +129,111 @@ export const owneditem = {
 		const selected = db[itemID];
 		if (!selected) return { qty: 0, itemID };
 
-		const { manual, wish } = selected;
-		return { itemID, qty: manual + wish };
+		const { manual = 0, wish = 0 } = selected;
+		return {
+			itemID,
+			qty: selected.copies ? selected.copies.length : manual + wish,
+			acquired: manual + wish,
+			activated: selected.activated || 0,
+			materials: materials(selected),
+			copies: selected.copies || []
+		};
 	},
 
 	put({ itemID, source = 'wish', qty = 1 }) {
-		const allItems = storageLocal.get('ownedItem');
-		const { manual = 0, wish = 0 } = allItems[itemID] || {};
+		if (!Number.isSafeInteger(qty) || qty < 1) throw Error('Invalid acquisition quantity');
+		const allItems = this.getAll();
+		const previous = normalizeRecord(
+			allItems[itemID],
+			itemID,
+			weaponIDs.has(Number(itemID)) ? 'weapon' : 'character'
+		);
+		const { manual = 0, wish = 0 } = previous;
+		if (!Number.isSafeInteger(manual + wish + qty))
+			throw Error('Inventory exceeds supported integer precision');
 		allItems[itemID] = {
+			...previous,
 			manual: source === 'wish' ? manual : qty + manual,
 			wish: source === 'wish' ? qty + wish : wish
 		};
+		if (previous.copies) {
+			for (let i = 0; i < qty; i++)
+				allItems[itemID].copies.push({ id: crypto.randomUUID(), refinement: 1, locked: false });
+		}
 
 		storageLocal.set('ownedItem', allItems);
 		return allItems[itemID];
+	},
+	activate(itemID, amount = 1) {
+		const all = this.getAll();
+		if (
+			!all[itemID] ||
+			weaponIDs.has(Number(itemID)) ||
+			(all[itemID].manual || 0) + (all[itemID].wish || 0) < 1
+		)
+			throw Error('Character not owned');
+		all[itemID] = activate(all[itemID], amount);
+		storageLocal.set('ownedItem', all);
+		return all[itemID];
+	},
+	refine(itemID, targetID, donorID) {
+		const all = this.getAll();
+		if (!all[itemID]?.copies) throw Error('Weapon not owned');
+		if (Object.values(all).some((x) => x.build?.weaponCopyID === donorID))
+			throw Error('Unequip the material copy before refining');
+		all[itemID] = refine(all[itemID], targetID, donorID);
+		storageLocal.set('ownedItem', all);
+		return all[itemID];
+	},
+	lock(itemID, copyID) {
+		const all = this.getAll();
+		const copy = all[itemID]?.copies?.find((c) => c.id === copyID);
+		if (!copy) throw Error('Weapon copy not found');
+		copy.locked = !copy.locked;
+		storageLocal.set('ownedItem', all);
+	},
+	setBuild(itemID, build) {
+		const all = this.getAll();
+		if (!all[itemID]) throw Error('Item not owned');
+		if (build.weaponCopyID) {
+			const weapon = weaponCatalog.find((w) => w.itemID === Number(build.weaponItemID));
+			if (!weapon || weapon.weaponType !== equipmentClasses[itemID])
+				throw Error('This weapon class cannot be equipped by this character');
+			if (!all[weapon.itemID]?.copies?.some((c) => c.id === build.weaponCopyID))
+				throw Error('Weapon copy not found');
+			if (
+				Object.entries(all).some(
+					([id, r]) => id !== String(itemID) && r.build?.weaponCopyID === build.weaponCopyID
+				)
+			)
+				throw Error('This copy is already equipped. Use Switch to transfer it.');
+		}
+		all[itemID].build = build;
+		storageLocal.set('ownedItem', all);
+	},
+	equip(itemID, weaponItemID, copyID) {
+		const all = this.getAll();
+		if (
+			!all[itemID] ||
+			weaponIDs.has(Number(itemID)) ||
+			(all[itemID].manual || 0) + (all[itemID].wish || 0) < 1
+		)
+			throw Error('Character not owned');
+		const weapon = weaponCatalog.find((w) => w.itemID === Number(weaponItemID));
+		if (!weapon || !equipmentClasses[itemID] || weapon.weaponType !== equipmentClasses[itemID])
+			throw Error('This weapon class cannot be equipped by this character');
+		if (!all[weaponItemID]?.copies?.some((c) => c.id === copyID))
+			throw Error('Weapon copy not found');
+		for (const [id, record] of Object.entries(all)) {
+			if (id !== String(itemID) && record.build?.weaponCopyID === copyID)
+				record.build = { ...record.build, weaponItemID: '', weaponCopyID: '' };
+		}
+		all[itemID].build = {
+			...all[itemID].build,
+			weaponItemID: Number(weaponItemID),
+			weaponCopyID: copyID
+		};
+		storageLocal.set('ownedItem', all);
 	}
 };
 

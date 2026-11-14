@@ -26,6 +26,7 @@
 		outfitName,
 		custom
 	} = data;
+	$: nativeCard = !custom && type === 'character' && !useOutfit && $assets[`wishcard/${name}`];
 </script>
 
 <div
@@ -57,10 +58,11 @@
 			{:else}
 				<div
 					class="zoomist-image"
-					style={getCssVarPosition(offset?.wishCard || {}, clientHeight, clientWidth)}
+					class:native-card={!!nativeCard}
+					style={nativeCard ? '' : getCssVarPosition(offset?.wishCard || {}, clientHeight, clientWidth)}
 				>
 					<img
-						src={$assets[`splash-art/${useOutfit ? outfitName : name}`]}
+						src={nativeCard || $assets[`splash-art/${useOutfit ? outfitName : name}`]}
 						alt={name}
 						class="wishpic"
 						crossorigin="anonymous"
@@ -217,6 +219,8 @@
 		width: 100%;
 		height: 100%;
 	}
+	.zoomist-image.native-card {inset:0;width:100%;height:100%;transform:none}
+	.zoomist-image.native-card img {object-fit:cover;object-position:center top}
 
 	img {
 		width: 100%;

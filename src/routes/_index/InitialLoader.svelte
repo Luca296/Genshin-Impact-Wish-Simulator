@@ -18,6 +18,14 @@
 	};
 
 	const assetInit = async (param) => {
+		if (window.desktop) {
+			// Bundled artwork already has stable local URLs. Avoid copying every
+			// startup image into a blob before showing the game.
+			assets.set(itemList());
+			current = 100;
+			handleLoaded();
+			return;
+		}
 		const ispreview = param === 'preview';
 		const arr = [];
 		let i = 0;

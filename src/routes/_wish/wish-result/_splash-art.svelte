@@ -13,9 +13,10 @@
 	export let clientHeight = 0;
 	export let clientWidth = 0;
 	export let offset = {};
+	export let elemental = false;
 </script>
 
-<div class="zoomist-wrapper splash-art anim {type}" style="overflow: visible;" use:removeAnimClass>
+<div class="zoomist-wrapper splash-art {type}" class:anim={!elemental} class:elemental style="overflow: visible;" use:removeAnimClass>
 	<!-- Custom Art -->
 	{#if custom}
 		{@const { images = {}, hostedImages = {}, status, artPosition } = $customData || {}}
@@ -87,6 +88,15 @@
 		filter: brightness(0) opacity(0);
 		animation: splashart forwards 1.5s 1;
 	}
+	.splash-art.elemental {
+		filter:brightness(1);
+		animation:elementalEntrance .6s cubic-bezier(.16,1,.3,1) both;
+	}
+	@keyframes elementalEntrance {
+		from {opacity:0;transform:scale(1.08) translate(2%,0)}
+		to {opacity:1;transform:scale(1) translate(2%,0)}
+	}
+	@media(prefers-reduced-motion:reduce) {.splash-art.elemental{animation:none}}
 	.splash-art:not(.anim) {
 		transform: translate(2%, 0);
 	}

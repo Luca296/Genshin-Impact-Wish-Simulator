@@ -266,7 +266,9 @@
 			"etc": "等",
 			"probIncreased": "获取概率提升！",
 			"eventNote": "活动限定五星角色仅在UP期间，通过对应祈愿获得。",
-			"viewDetails": "具体内容查看【详情】"
+			"viewDetails": "具体内容查看【详情】",
+			"newWishAvailable": "全新祈愿开启",
+			"weaponEventLabel": "武器活动祈愿"
 		},
 		"result": {
 			"skip": "跳过",

@@ -56,11 +56,11 @@
 		});
 	};
 
-	const ownedItems = owneditem.getAll();
 	const loadItems = async (type) => {
+		const ownedItems = owneditem.getAll();
 		const isChar = type === 'character';
 		const data = isChar ? [...(await customItem()), ...charDB] : weaponDB;
-		const dataResult = data.map((d) => {
+		const dataResult = data.flatMap((d) => {
 			const { name, itemID, rarity, weaponType, vision, images, custom, offset } = d;
 			const { wish = 0, manual = 0 } = ownedItems[itemID] || {};
 			const qty = wish + manual;
@@ -70,7 +70,16 @@
 			itemQty[type] = qty > 0 ? itemQty[type] + 1 : itemQty[type];
 
 			// prettier-ignore
-			return { name, localName, rarity, type, vision, weaponType, qty, isOwned, images, itemID, custom, offset };
+			const base = { name, localName, rarity, type, vision, weaponType, qty, isOwned, images, itemID, custom, offset };
+			if (type === 'weapon' && isOwned)
+				return (ownedItems[itemID].copies || []).map((copy) => ({
+					...base,
+					copyID: copy.id,
+					refinement: copy.refinement,
+					locked: copy.locked,
+					qty: 1
+				}));
+			return [{ ...base, activated: ownedItems[itemID]?.activated || 0 }];
 		});
 		return dataResult;
 	};
@@ -95,12 +104,26 @@
 	};
 	$: proccessData(activeItem, showAll);
 
-	onMount(async () => {
+	const reload = async () => {
+		itemQty = { weapon: 0, character: 0 };
 		characters = (await loadItems('character')).map((c) => setActiveOutfit(c));
 		weapons = await loadItems('weapon');
 		isLoaded = true;
 		proccessData(activeItem, showAll);
 		loaded();
+	};
+	onMount(() => {
+		let pending;
+		const schedule = () => {
+			clearTimeout(pending);
+			pending = setTimeout(reload, 0);
+		};
+		reload();
+		document.addEventListener('storageUpdate', schedule);
+		return () => {
+			clearTimeout(pending);
+			document.removeEventListener('storageUpdate', schedule);
+		};
 	});
 </script>
 

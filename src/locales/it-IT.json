@@ -266,7 +266,9 @@
 			"etc": "ecc.",
 			"probIncreased": "Probabilità aumentata !",
 			"eventNote": "I personaggi a 5 stelle esclusivi dell'evento possono essere ottenuti solo nel wish specifico durante il periodo/i determinato.",
-			"viewDetails": "Visualizza i Dettagli per maggiori informazioni."
+			"viewDetails": "Visualizza i Dettagli per maggiori informazioni.",
+			"newWishAvailable": "Nuovo desiderio disponibile",
+			"weaponEventLabel": "Desiderio evento armi"
 		},
 		"result": {
 			"skip": "Salta",

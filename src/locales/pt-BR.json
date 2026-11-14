@@ -266,7 +266,9 @@
 			"etc": "etc.",
 			"probIncreased": "Probabilidade aumentada!",
 			"eventNote": "Os personagens ilimitados de 5 estrelas só podem ser obtidos na oração correspondente.",
-			"viewDetails": "Leia Detalhes para mais informações."
+			"viewDetails": "Leia Detalhes para mais informações.",
+			"newWishAvailable": "Nova oração disponível",
+			"weaponEventLabel": "Oração de armas"
 		},
 		"result": {
 			"skip": "Pular",

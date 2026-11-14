@@ -17,6 +17,7 @@
 	import { localBalance, localConfig } from '$lib/helpers/dataAPI/api-localstore';
 	import { APP_TITLE } from '$lib/env';
 	import { playSfx } from '$lib/helpers/audio/audio';
+	import { loadJournal, recordJournalBatch } from '$lib/helpers/journal';
 	import WISH, { roll } from '$lib/helpers/gacha/Wish';
 
 	// Components
@@ -73,12 +74,15 @@
 		if (!isUnlimited && rollCost > currencyUsed) return (showConvertModal = true);
 		const indexOfCharBanner = bannerToRoll === 'character-event' ? getIndexOfCharBanner() : 0;
 		onWish.set(true);
+		await loadJournal();
+		const journalBatch = crypto.randomUUID();
 
 		for (let i = 0; i < count; i++) {
-			const result = await roll(bannerToRoll, WishInstance, indexOfCharBanner);
+			const result = await roll(bannerToRoll, WishInstance, indexOfCharBanner, journalBatch, count);
 			tmp.push(result);
 		}
 
+		recordJournalBatch(tmp);
 		result = tmp;
 		handleMeteorAnimation();
 		if (isUnlimited) return;
@@ -276,6 +280,7 @@
 
 	.top {
 		min-height: 70px;
+		flex: 0 0 70px;
 	}
 	.banner,
 	.item {
@@ -283,15 +288,22 @@
 	}
 	.item {
 		position: relative;
+		flex: 1;
+		min-height: 0;
+		height: auto;
 	}
 	.banner {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		flex: 1;
+		min-height: 0;
+		height: auto;
 	}
 
 	.button {
 		height: 120px;
+		flex: 0 0 120px;
 	}
 
 	/* Mobile */
@@ -301,6 +313,7 @@
 	:global(.mobile) .top {
 		height: 100%;
 		width: min-content;
+		flex: initial;
 	}
 	:global(.mobile) .banner {
 		width: 120%;
@@ -308,6 +321,7 @@
 	}
 	:global(.mobile) .button {
 		height: 50px;
+		flex-basis: 50px;
 		margin-bottom: 0.2rem;
 	}
 </style>

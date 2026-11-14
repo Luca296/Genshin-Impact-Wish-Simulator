@@ -19,7 +19,7 @@
 	let blob;
 	let showResult = false;
 	let loading = false;
-	let btnTxt = canshare ? $t('share') : $t('screenshot');
+	let btnTxt = $t('screenshot');
 
 	let obtainScreen = false;
 	let isFirstTimeShare = !localConfig.get('firstTimeShare');
@@ -60,11 +60,11 @@
 			showResult = true;
 			loading = false;
 			preview(false);
-			btnTxt = canshare ? $t('share') : $t('screenshot');
+			btnTxt = $t('screenshot');
 		} catch (e) {
 			loading = false;
 			preview(false);
-			btnTxt = canshare ? $t('share') : $t('screenshot');
+			btnTxt = $t('screenshot');
 			console.error('failed to take screenshot', e);
 		}
 	};

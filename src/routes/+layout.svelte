@@ -1,6 +1,5 @@
 <script>
 	// Packagae
-	import { registerSW } from 'virtual:pwa-register';
 	import { isLoading, locale } from 'svelte-i18n';
 	import { page } from '$app/stores';
 	import { dev } from '$app/environment';
@@ -25,6 +24,8 @@
 	import { syncCustomBanner } from '$lib/helpers/banner-custom';
 	// import { initializeDriveAPI } from '$lib/helpers/dataAPI/google-api';
 	import '../app.css';
+	import { initializeDesktop } from '$lib/helpers/desktop';
+	import { initializeProgression } from '$lib/helpers/progression/migration';
 
 	import Iklan from '$lib/components/Iklan.svelte';
 	import Toasts from '$lib/components/Toasts.svelte';
@@ -34,6 +35,7 @@
 	let innerWidth;
 	let isBannerLoaded = false;
 	let isloaded = false;
+	let inventoryReady = false;
 
 	setContext('bannerLoaded', () => (isBannerLoaded = true));
 	setContext('loaded', () => (isloaded = true));
@@ -85,10 +87,13 @@
 		});
 
 		storageLocal.initEvent(); //for autoexport
-		registerSW(); // Service Worker for faster load
+		// Desktop assets are bundled; no service worker.
 		wakeLock(); // Prevent screen off while open the app
 		await IDBUpdater(); // Update site data to the newer Version
-		syncCustomBanner(); // Sync Custom Banner
+		await initializeProgression();
+		inventoryReady = true;
+		await initializeDesktop();
+		// Online custom-banner sync is disabled.
 		// initializeDriveAPI(); // Drive API for cloud Sync
 
 		document.addEventListener('storageUpdate', () => sync($autoExport));
@@ -161,7 +166,7 @@
 	<Iklan head />
 </svelte:head>
 
-<Loader {isBannerLoaded} {directLoad} />
+<Loader isBannerLoaded={isBannerLoaded && inventoryReady} {directLoad} />
 
 <main
 	class:mobile={$mobileMode}
@@ -174,17 +179,9 @@
 >
 	<Toasts />
 
-	{#if !$isLoading && isloaded}
+	{#if !$isLoading && isloaded && inventoryReady}
 		<slot />
 	{/if}
-	<a
-		href="/"
-		on:click|preventDefault={() => window.location.replace('/')}
-		class="uid"
-		title="Try Your Luck by this Simulator"
-	>
-		WishSimulator.App
-	</a>
 </main>
 
 <style global>

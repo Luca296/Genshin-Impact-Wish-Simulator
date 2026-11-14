@@ -78,6 +78,10 @@ export const HistoryManager = {
 		return clear;
 	},
 
+	async getHistoriesAfter(id = 0) {
+		return (await IndexedDB).getAll('history', IDBKeyRange.lowerBound(id, true));
+	},
+
 	async getAllHistories() {
 		return (await IndexedDB).getAll('history');
 	},

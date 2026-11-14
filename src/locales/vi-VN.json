@@ -266,7 +266,9 @@
 			"etc": "v.v.",
 			"probIncreased": "Tỉ Lệ Cầu Nguyện Tăng!",
 			"eventNote": "Chỉ có thể nhận được các nhân vật 5 sao dành riêng cho sự kiện cầu nguyện đã được chỉ định trong khoảng thời gian cụ thể.",
-			"viewDetails": "Xem chi tiết để biết thêm."
+			"viewDetails": "Xem chi tiết để biết thêm.",
+			"newWishAvailable": "Cầu Nguyện Mới",
+			"weaponEventLabel": "Cầu Nguyện Vũ Khí"
 		},
 		"result": {
 			"skip": "Bỏ Qua",

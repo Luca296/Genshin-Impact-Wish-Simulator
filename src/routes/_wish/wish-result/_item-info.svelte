@@ -17,9 +17,10 @@
 	export let stelaFortuna = false;
 	export let bonusQty = 0;
 	export let rarity = 4;
+	export let elemental = false;
 </script>
 
-<div class="info">
+<div class="info" class:elemental>
 	{#if type !== 'outfit'}
 		<div class="icon vision" class:animate={!staticMode} use:removeAnimClass>
 			<SvgIcon name={weaponType || vision} />
@@ -82,6 +83,10 @@
 </div>
 
 <style>
+	.info.elemental .icon.animate {animation-delay:.1s!important;animation-duration:.4s}
+	.info.elemental .name .text.animate {animation-delay:.15s!important;animation-duration:.45s}
+	.info.elemental .star .gi-star.animate {animation-delay:.4s!important;animation-duration:.3s}
+	.info.elemental .bonus.animate {animation-duration:.6s}
 	/* Infoemation */
 	.info {
 		position: fixed;

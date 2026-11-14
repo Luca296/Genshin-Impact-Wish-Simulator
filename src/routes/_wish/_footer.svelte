@@ -25,7 +25,6 @@
 	import Icon from '$lib/components/Icon.svelte';
 	import NoticeMark from '$lib/components/NoticeMark.svelte';
 	import ButtonGeneral from '$lib/components/ButtonGeneral.svelte';
-	import EpitomizedButton from './epitomized-path/WeaponButton.svelte';
 	import BannerPublisher from '../_custom-banner/Publisher.svelte';
 
 	export let bannerType = 'beginner';
@@ -110,11 +109,12 @@
 		handleSingleRollClick();
 	});
 
-	hotkeys('s,c,h,d', 'index', (e) => {
+	hotkeys('s,c,h,d,j', 'index', (e) => {
 		if (!$appReady || $onWish || $editorMode) return;
 		e.preventDefault();
 		const [key] = hotkeys.getPressedKeyString();
 		const to = key.toLocaleLowerCase();
+		if (to === 'j') return changePage('journal');
 		if (to === 's') return changePage('shop');
 		if (to === 'c') return changePage('inventory');
 		if (to === 'h') return changePage('history');
@@ -130,9 +130,6 @@
 	{#if !$editorMode}
 		<div class="footer-info">
 			{#if !$mobileMode}
-				{#if bannerType === 'weapon-event'}
-					<EpitomizedButton />
-				{/if}
 				<div class="wish">
 					<div class="starglitter">
 						<Icon type="starglitter" />
@@ -150,6 +147,7 @@
 	<div class="row" style="--bg:url({$assets['button.webp']})">
 		{#if !$editorMode}
 			<div class="left menu-button">
+				<ButtonGeneral on:click={() => changePage('journal')}>Journal</ButtonGeneral>
 				<ButtonGeneral on:click={() => changePage('shop')}>
 					{#if hasNewOutfit}
 						<NoticeMark name={openedNotices} style="transform: translateX(70%) translateY(-80%)" />
@@ -233,15 +231,7 @@
 						on:click={publishBanner}
 					>
 						<i class="gi-share" style="transform: translateX(-50%);" />
-						{#await localBanner.isHostedBanner($editID)}
-							<span> {$t('customBanner.publish')} </span>
-						{:then isHosted}
-							{#if isHosted}
-								<span> {$t('customBanner.updateAndShare')} </span>
-							{:else}
-								<span> {$t('customBanner.publish')} </span>
-							{/if}
-						{/await}
+						<span>Export banner backup</span>
 					</button>
 				{/if}
 			</div>

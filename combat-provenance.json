@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/theBowja/genshin-db-dist",
+  "version": "v5.2.14",
+  "imported": "2026-10-31T22:58:28.478Z",
+  "hashes": {
+    "data/gzips/english-characters.min.json.gzip": "51dd675cbb384c57bbd77d9546c18d1bdf7881bf4740e96a0467108ef3bada28",
+    "data/gzips/english-talents.min.json.gzip": "04aa8fa53dbcc990a3b44293e74852627ce3ff833ef25b13742f2e107c4b51dd",
+    "data/gzips/english-constellations.min.json.gzip": "4f14cac8d71ca24c81daee4145c92f8377e12e4ed9566d87852d48bbe7b0a53a",
+    "data/gzips/english-weapons.min.json.gzip": "1413edbb85edb2db90399f492e624fde3c81ad4e3ff6721f72875f86366115d8"
+  }
+}

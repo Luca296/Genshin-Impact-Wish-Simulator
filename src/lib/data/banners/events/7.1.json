@@ -1,0 +1,139 @@
+{
+  "patch": 7.1,
+  "data": [
+    {
+      "phase": 1,
+      "banners": {
+        "standardVersion": 5,
+        "events": {
+          "featured": [
+            {
+              "bannerName": "when-warm-winds-cavort-1",
+              "character": "vesna",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            },
+            {
+              "bannerName": "surging-ballad-1",
+              "character": "vodyanitsa",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            }
+          ],
+          "rateup": [
+            "diona",
+            "faruzan",
+            "chongyun"
+          ]
+        },
+        "weapons": {
+          "bannerName": "epitome-invocation-105",
+          "fatepointsystem": true,
+          "featured": [
+            {
+              "name": "beyond-the-chrysalis"
+            },
+            {
+              "name": "hymn-of-the-maelstrom",
+              "buttonPosition": {
+                "l": 70
+              }
+            }
+          ],
+          "rateup": [
+            "new-bough",
+            "winters-heavy-heart",
+            "breezeborne-refrain",
+            "favonius-greatsword",
+            "dragon_s-bane"
+          ],
+          "textOffset": {
+            "featured": {
+              "l": 48.5,
+              "t": 71
+            },
+            "rateup": {
+              "l": 77.5,
+              "b": 16,
+              "w": 20
+            }
+          },
+          "bakedText": true
+        }
+      }
+    },
+    {
+      "phase": 2,
+      "banners": {
+        "standardVersion": 5,
+        "events": {
+          "featured": [
+            {
+              "bannerName": "void-stars-advent-3",
+              "character": "skirk",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            },
+            {
+              "bannerName": "la-chanson-cerise-3",
+              "character": "escoffier",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            }
+          ],
+          "rateup": [
+            "dahlia",
+            "candace",
+            "mika"
+          ]
+        },
+        "weapons": {
+          "bannerName": "epitome-invocation-106",
+          "fatepointsystem": true,
+          "featured": [
+            {
+              "name": "azurelight"
+            },
+            {
+              "name": "symphonist-of-scents",
+              "buttonPosition": {
+                "l": 70
+              }
+            }
+          ],
+          "rateup": [
+            "sturdy-bone",
+            "sacrificial-greatsword",
+            "favonius-lance",
+            "the-widsith",
+            "sacrificial-bow"
+          ],
+          "textOffset": {
+            "featured": {
+              "l": 48.5,
+              "t": 71
+            },
+            "rateup": {
+              "l": 77.5,
+              "b": 16,
+              "w": 20
+            }
+          },
+          "bakedText": true
+        }
+      }
+    }
+  ]
+}

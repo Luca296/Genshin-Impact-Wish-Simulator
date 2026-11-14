@@ -1,113 +1,24 @@
 <script>
-	import { t } from 'svelte-i18n';
-	import { fade } from 'svelte/transition';
-	import { assets } from '$lib/store/app-stores';
-	import { playSfx } from '$lib/helpers/audio/audio';
-	import SyncCloud from './backup-restore/_sync-cloud.svelte';
-	import SyncLocal from './backup-restore/_sync-local.svelte';
-
-	let activeSync = 'local';
-	const buttonNavigation = (section) => {
-		if (activeSync === section) return;
-		activeSync = section;
-		playSfx('shopnav');
-	};
+import {onMount} from 'svelte';
+import {snapshot,restoreBackup,flush} from '$lib/helpers/desktop';
+import Button from '$lib/components/ButtonModal.svelte';
+let backups=[],selected='',message='';
+async function refresh(){backups=await window.desktop.list();selected=backups[0]||'';}
+onMount(refresh);
+async function exportFile(){try{if(await window.desktop.export(await snapshot()))message='Backup exported.'}catch(e){message=e.message}}
+async function restore(text){if(!text)return;if(!confirm('Restore backup? Current progress will be backed up first.'))return;await restoreBackup(text);location.reload();}
+async function importFile(){try{await restore(await window.desktop.import())}catch(e){message=e.message}}
+async function restoreAuto(){try{await restore(await window.desktop.restore(selected))}catch(e){message=e.message}}
+async function backupNow(){try{await flush();await refresh();message='Automatic backup saved.'}catch(e){message=e.message}}
 </script>
-
-<div
-	class="backupRestore content-container"
-	in:fade={{ duration: 200 }}
-	style="--bg-icon:url('{$assets['modal-bg-icon.png']}')"
->
-	<nav>
-		<button class:active={activeSync === 'cloud'} on:click={() => buttonNavigation('cloud')}>
-			<i class="gi-drive" />
-			<span> {$t('backupRestore.cloudSync')}</span>
-		</button>
-		<button class:active={activeSync === 'local'} on:click={() => buttonNavigation('local')}>
-			<i class="gi-local" />
-			<span> {$t('backupRestore.localSync')}</span>
-		</button>
-	</nav>
-	<div class="content">
-		{#if activeSync === 'cloud'}
-			<SyncCloud />
-		{:else}
-			<SyncLocal />
-		{/if}
-	</div>
+<div class="backupRestore content-container">
+<h2>Local backups</h2>
+<p>Progress is saved in your application data folder. Automatic backups keep the latest 20 snapshots, including custom-banner artwork.</p>
+<div class="actions"><Button on:click={exportFile}>Export backup</Button><Button on:click={importFile}>Import backup</Button><Button on:click={backupNow}>Back up now</Button></div>
+<h2>Restore automatic backup</h2>
+<select aria-label="Automatic backup" bind:value={selected}>{#each backups as name}<option value={name}>{name}</option>{/each}</select>
+<Button on:click={restoreAuto} disabled={!selected}>Restore selected backup</Button>
+<p role="status">{message}</p>
+<p>Compatible with upstream JSON .bin backups. Membership keys and remote-only artwork are not imported as offline entitlements or assets.</p>
 </div>
-
-<style>
-	.content-container {
-		background-color: #fbf6ee;
-		background-image: var(--bg-icon);
-		background-repeat: no-repeat;
-		background-size: 50%;
-		background-position: 50% 60%;
-		border-radius: 0.5rem;
-		color: var(--text-color);
-		overflow: hidden;
-	}
-
-	nav {
-		width: 100%;
-		display: flex;
-		position: relative;
-		z-index: +1;
-	}
-	nav::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 50%;
-		top: 0;
-		left: 0;
-		background-color: rgb(51, 57, 71);
-		z-index: -1;
-	}
-
-	nav button {
-		width: 100%;
-		flex: 1;
-		flex-basis: 50%;
-		padding: 1rem;
-		background-color: rgb(51, 57, 71);
-		color: #fff;
-		transition: all 0.25s;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-	}
-	nav button i {
-		font-size: larger;
-		line-height: 0;
-		transform: translateX(-25%);
-	}
-
-	nav button.active {
-		background-color: #fbf6ee;
-		color: initial;
-	}
-
-	nav button:nth-child(1) {
-		border-bottom-right-radius: 1.75rem;
-	}
-	nav button.active:nth-child(1) {
-		border-bottom-right-radius: unset;
-		border-top-right-radius: 1.75rem;
-	}
-
-	nav button:nth-child(2) {
-		border-bottom-left-radius: 1.75rem;
-	}
-	nav button.active:nth-child(2) {
-		border-bottom-left-radius: unset;
-		border-top-left-radius: 1.75rem;
-	}
-
-	.content {
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<style>.content-container{background:#fbf6ee;color:#565654;border-radius:.5rem;padding:2rem;overflow:auto;height:100%}h2{margin:1rem 0}p{margin:1rem 0;line-height:1.5}.actions{display:flex;gap:1rem;flex-wrap:wrap}select{display:block;width:100%;padding:1rem;margin-bottom:1rem;background:#fff;color:#565654}</style>

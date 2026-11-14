@@ -1,0 +1,139 @@
+{
+  "patch": 7,
+  "data": [
+    {
+      "phase": 1,
+      "banners": {
+        "standardVersion": 5,
+        "events": {
+          "featured": [
+            {
+              "bannerName": "swans-shadow-in-silken-ice-1",
+              "character": "odette",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            },
+            {
+              "bannerName": "the-hearths-ashen-shadow-4",
+              "character": "arlecchino",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            }
+          ],
+          "rateup": [
+            "alyosha",
+            "sucrose",
+            "lynette"
+          ]
+        },
+        "weapons": {
+          "bannerName": "epitome-invocation-103",
+          "fatepointsystem": true,
+          "featured": [
+            {
+              "name": "whitelake-frostfeather"
+            },
+            {
+              "name": "crimson-moons-semblance",
+              "buttonPosition": {
+                "l": 70
+              }
+            }
+          ],
+          "rateup": [
+            "favonius-sword",
+            "the-bell",
+            "dragon_s-bane",
+            "sacrificial-fragments",
+            "rust"
+          ],
+          "textOffset": {
+            "featured": {
+              "l": 48.5,
+              "t": 71
+            },
+            "rateup": {
+              "l": 77.5,
+              "b": 16,
+              "w": 20
+            }
+          },
+          "bakedText": true
+        }
+      }
+    },
+    {
+      "phase": 2,
+      "banners": {
+        "standardVersion": 5,
+        "events": {
+          "featured": [
+            {
+              "bannerName": "the-lone-light-knocks-at-night-3",
+              "character": "flins",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            },
+            {
+              "bannerName": "astral-actuation-3",
+              "character": "ineffa",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            }
+          ],
+          "rateup": [
+            "aino",
+            "iansan",
+            "lan-yan"
+          ]
+        },
+        "weapons": {
+          "bannerName": "epitome-invocation-104",
+          "fatepointsystem": true,
+          "featured": [
+            {
+              "name": "bloodsoaked-ruins"
+            },
+            {
+              "name": "fractured-halo",
+              "buttonPosition": {
+                "l": 60
+              }
+            }
+          ],
+          "rateup": [
+            "the-flute",
+            "favonius-greatsword",
+            "favonius-lance",
+            "eye-of-perception",
+            "the-stringless"
+          ],
+          "textOffset": {
+            "featured": {
+              "l": 48.5,
+              "t": 71
+            },
+            "rateup": {
+              "l": 77.5,
+              "b": 16,
+              "w": 20
+            }
+          },
+          "bakedText": true
+        }
+      }
+    }
+  ]
+}

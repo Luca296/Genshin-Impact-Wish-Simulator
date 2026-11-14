@@ -91,7 +91,7 @@
 
 	<div class="wrapper" in:scale={{ opacity: 1, start: 1.1 }}>
 		<div class="letshare">
-			{#if canshare}
+			{#if false}
 				<div class="copy">
 					<span class="text">{shareLink}</span>
 					<button title="Copy link" on:click={copyHandle}> <i class="gi-link" /> </button>
@@ -102,7 +102,7 @@
 				<i class="gi-save" />
 			</button>
 
-			{#if canshare}
+			{#if false}
 				<div class="divider" />
 				<button class="save" title="Share to Twitter" on:click={twitterHandle}>
 					<i class="gi-twitter" />

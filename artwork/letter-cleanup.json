@@ -1,0 +1,452 @@
+{
+  "to-the-looking-glass-the-mademoiselle-said-1": {
+    "source": "src/images/banner/character-events/to-the-looking-glass-the-mademoiselle-said-1.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        575,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 33204,
+    "maskFraction": 0.046739864864864866,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "f32ebf3a1aaa3823d9610191464e79b360b4abd6684e066b9200f5b143fda45c"
+  },
+  "starry-nights-whispers-3": {
+    "source": "src/images/banner/character-events/starry-nights-whispers-3.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 25836,
+    "maskFraction": 0.036368243243243246,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "9d6f3409aece842f2d9cbc0e4a99651940492c64534e88a549e19fe04e57d7ed"
+  },
+  "somnias-a-luna-2": {
+    "source": "src/images/banner/character-events/somnias-a-luna-2.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 15510,
+    "maskFraction": 0.02183277027027027,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "55665f34e7dd46c5822bf8f179f7284867c55d17d0a2cf0bd2287e28a47e687d"
+  },
+  "reign-of-serenity-7": {
+    "source": "src/images/banner/character-events/reign-of-serenity-7.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 20517,
+    "maskFraction": 0.028880912162162164,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "613adff67e6c4595ffc1380860183699b3554c89f2feb8723ebbf7c4a42b881d"
+  },
+  "swans-shadow-in-silken-ice-1": {
+    "source": "src/images/banner/character-events/swans-shadow-in-silken-ice-1.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 22668,
+    "maskFraction": 0.031908783783783784,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "a907d022245cc0acc4fd4f2980e0ff35219d7579f9d6ae851b7575d2bb95439d"
+  },
+  "the-hearths-ashen-shadow-4": {
+    "source": "src/images/banner/character-events/the-hearths-ashen-shadow-4.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 18934,
+    "maskFraction": 0.02665259009009009,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "70d09c9aca0b3befae87148302c08929e8b6355766a8eb9041fd2b470d471d36"
+  },
+  "the-lone-light-knocks-at-night-3": {
+    "source": "src/images/banner/character-events/the-lone-light-knocks-at-night-3.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 23523,
+    "maskFraction": 0.03311233108108108,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "c38771bcdaafa5db351478e6670809c7cc5bd185ee7800061437d17b022afe92"
+  },
+  "astral-actuation-3": {
+    "source": "src/images/banner/character-events/astral-actuation-3.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 23014,
+    "maskFraction": 0.03239583333333333,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "22d2b5f97b08a1a25ad75b054110f005d6b581ec9de42ae8be10e23a1e5039d5"
+  },
+  "when-warm-winds-cavort-1": {
+    "source": "src/images/banner/character-events/when-warm-winds-cavort-1.webp",
+    "boxes": [
+      [
+        45,
+        70,
+        480,
+        198
+      ],
+      [
+        50,
+        215,
+        365,
+        253
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 28323,
+    "maskFraction": 0.03986908783783784,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "177ebc217ec6356cb1878d85f67b3a8bf626b6b3cb6bb419f29418eff2d80da7"
+  },
+  "surging-ballad-1": {
+    "source": "src/images/banner/character-events/surging-ballad-1.webp",
+    "boxes": [
+      [
+        50,
+        125,
+        475,
+        195
+      ],
+      [
+        50,
+        215,
+        365,
+        253
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 20021,
+    "maskFraction": 0.028182713963963962,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "b26d6760edffc1708c7ecf0c6e79041ea1c4c104cedcec34212f49fb447a808c"
+  },
+  "void-stars-advent-3": {
+    "source": "src/images/banner/character-events/void-stars-advent-3.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 17404,
+    "maskFraction": 0.024498873873873873,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "eb5fcb6d3cc34cf57f3c840cd4bcac31ec86d149b5f103cff0f966dc36e0d586"
+  },
+  "la-chanson-cerise-3": {
+    "source": "src/images/banner/character-events/la-chanson-cerise-3.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 21296,
+    "maskFraction": 0.029977477477477477,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "8e90aa8023cdbdcac5471ad893eec174792bf5346e31749c546a275070eb6b3d"
+  },
+  "epitome-invocation-101": {
+    "source": "src/images/banner/weapons/epitome-invocation-101.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 22005,
+    "maskFraction": 0.030975506756756758,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "62083f3c52fa8f6a2ab7c6b24d47b29b7914d1844f4205427271d23f8d6e2aec"
+  },
+  "epitome-invocation-102": {
+    "source": "src/images/banner/weapons/epitome-invocation-102.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 22017,
+    "maskFraction": 0.03099239864864865,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "27e1ea84293fb23eb6cac308e9a4593f6d3c0adaa004bc206fab67fda5cb90b1"
+  },
+  "epitome-invocation-103": {
+    "source": "src/images/banner/weapons/epitome-invocation-103.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 22002,
+    "maskFraction": 0.030971283783783783,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "2bd0a7432aed4419a44fd7fce5a1fa33af885cdf45f1ace3def1e8a5d7a44bda"
+  },
+  "epitome-invocation-104": {
+    "source": "src/images/banner/weapons/epitome-invocation-104.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 21905,
+    "maskFraction": 0.03083474099099099,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "7480d8609f0cebdbcd57c892418d15e29dd309d7d01e69ba358f4ab4df2057f6"
+  },
+  "epitome-invocation-105": {
+    "source": "src/images/banner/weapons/epitome-invocation-105.webp",
+    "boxes": [
+      [
+        45,
+        70,
+        480,
+        198
+      ],
+      [
+        50,
+        215,
+        365,
+        253
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 22435,
+    "maskFraction": 0.03158079954954955,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "3ea9ced7bba3b255f508fcbe3d9baa111808f466a96acdf7b950fec1eb15d67b"
+  },
+  "epitome-invocation-106": {
+    "source": "src/images/banner/weapons/epitome-invocation-106.webp",
+    "boxes": [
+      [
+        45,
+        35,
+        480,
+        158
+      ],
+      [
+        45,
+        175,
+        365,
+        213
+      ]
+    ],
+    "threshold": 195,
+    "dilation": 5,
+    "inpaintRadius": 5,
+    "inpaintMethod": "OpenCV Telea",
+    "maskPixels": 21918,
+    "maskFraction": 0.03085304054054054,
+    "changedPixelsOutsideMask": 0,
+    "outputSha256": "574ca2538bc4b0b9b4e2e9176c613d9a0448a7ff1812fc38bb1fb5def118c68e"
+  }
+}

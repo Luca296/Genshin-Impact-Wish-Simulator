@@ -1,12 +1,12 @@
 <script>
-	import { getContext, onMount, setContext } from 'svelte';
+	import { getContext, onMount, onDestroy, setContext } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { t, locale } from 'svelte-i18n';
 	import hotkeys from 'hotkeys-js';
 
-	import { assets, viewportHeight, viewportWidth } from '$lib/store/app-stores';
+	import { assets, customData, viewportHeight, viewportWidth } from '$lib/store/app-stores';
 	import { localConfig } from '$lib/helpers/dataAPI/api-localstore';
-	import { playSfx, pauseSfx as stopSfx } from '$lib/helpers/audio/audio';
+	import { playSfx, pauseSfx as stopSfx, revealAudio } from '$lib/helpers/audio/audio';
 	import { setActiveOutfit } from '$lib/helpers/outfit';
 	import { createLink } from '$lib/helpers/shareable-link';
 
@@ -17,6 +17,8 @@
 	import WeaponBonus from './_weapon-bonus.svelte';
 	import ScreenshotShare from '../../_index/ScreenshotShare.svelte';
 	import SplashArt from './_splash-art.svelte';
+	import ElementReveal from './ElementReveal.svelte';
+	import { createRevealTimeline, isElementalCharacter } from '$lib/helpers/elemental-reveal';
 
 	export let list = [];
 	export let skip = false;
@@ -52,19 +54,44 @@
 		}, 1100);
 	};
 
-	const playRevealAudio = () => {
-		startTimer();
-		if (localConfig.get('muted')) return;
-		if (activeIndex > 0) {
-			const starBefore = list[activeIndex - 1].rarity;
-			stopSfx(`reveal${starBefore}Star`);
-		}
-		const star = list[activeIndex].rarity;
-		playSfx(`reveal${star}Star`);
-	};
-
 	let showResultList = false;
 	let activeIndex = 0;
+	let elementStage = 'none';
+	let timeline;
+	$: elemental = !standalone && !isOutfit && isElementalCharacter(list[activeIndex]);
+	$: introPending = elemental && elementStage !== 'revealed' && !showResultList;
+
+	const cancelReveal = (keepBed = false) => {
+		timeline?.cancel();
+		clearTimeout(timer);
+		revealAudio.cancel({ keepBed });
+		[3, 4, 5].forEach(star => stopSfx(`reveal${star}Star`));
+	};
+	const playRevealAudio = () => {
+		const item = list[activeIndex];
+		cancelReveal(!standalone && !isOutfit && isElementalCharacter(item));
+		elementStage = 'none';
+		if (!standalone && !isOutfit && isElementalCharacter(item)) {
+			revealAudio.startBed();
+			const src = item.custom ? $customData?.images?.artURL : $assets[`splash-art/${item.useOutfit ? item.outfitName : item.name}`];
+			// Decode into the image cache during suspense without mounting artwork.
+			if (src) { const image = new Image(); image.src = src; image.decode?.().catch(() => {}); }
+			if (skip || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+				elementStage = 'revealed';
+				revealAudio.cue(true);
+				return;
+			}
+			timeline = createRevealTimeline({
+				onPhase: phase => { elementStage = phase; },
+				onCue: immediate => revealAudio.cue(immediate)
+			});
+			timeline.start();
+			return;
+		}
+		startTimer();
+		if (!standalone) playSfx(`reveal${item.rarity}Star`);
+	};
+	const finishElementReveal = () => timeline?.finish();
 
 	const createShareableLink = (activeIndex, showResultList) => {
 		const isMulti = showResultList && list.length > 1;
@@ -73,6 +100,7 @@
 	};
 
 	const showItem = (startIndex) => {
+		if (startIndex !== 'start' && introPending) { finishElementReveal(); return; }
 		// Single Pull
 		if (list.length === 1) {
 			if (startIndex === 'start') playRevealAudio();
@@ -81,6 +109,7 @@
 
 		// Multi Pull
 		if (activeIndex > list.length - 2) {
+			cancelReveal();
 			showResultList = true;
 			return;
 		}
@@ -92,43 +121,56 @@
 
 	const closeResult = getContext('closeResult');
 	const closeHandle = () => {
+		cancelReveal();
 		playSfx('close');
 		closeResult();
 		return;
 	};
 
 	const skipHandle = () => {
+		cancelReveal();
 		playSfx();
 		showResultList = true;
 	};
 
 	onMount(() => {
-		if (!skip || list.length === 1) showItem('start');
-		if (skip || standalone) return (showResultList = true);
+		if ((skip || standalone) && list.length > 1) { showResultList = true; return; }
+		showItem('start');
 	});
 
 	// Shortcut
 	const onWish = getContext('onWish');
-	hotkeys('enter,space', 'index', (e) => {
+	const advanceKey = (e) => {
 		if (!$onWish) return;
 		e.preventDefault();
-		if (list.length > 1 && !showResultList) showItem();
-	});
+		if (introPending || (list.length > 1 && !showResultList)) showItem();
+	};
 
-	hotkeys('esc', 'index', (e) => {
+	const escapeKey = (e) => {
 		if (!$onWish) return;
 		e.preventDefault();
-		if (list <= 1 || showResultList) return closeHandle();
+		if (list.length === 1 && introPending) return finishElementReveal();
+		if (list.length <= 1 || showResultList) return closeHandle();
 		return skipHandle();
+	};
+	hotkeys('enter,space', 'index', advanceKey);
+	hotkeys('esc', 'index', escapeKey);
+	onDestroy(() => {
+		cancelReveal();
+		hotkeys.unbind('enter,space', 'index', advanceKey);
+		hotkeys.unbind('esc', 'index', escapeKey);
 	});
 </script>
 
 <div
 	class="wish-result"
 	class:preview
+	data-reveal-phase={elemental && !showResultList ? elementStage : 'standard'}
+	data-result-index={activeIndex}
 	style="background-image: url({splashBG});"
 	out:fade={{ duration: 250 }}
 >
+	{#if elemental && !showResultList}{#key activeIndex}<ElementReveal vision={list[activeIndex].vision} phase={elementStage} />{/key}{/if}
 	<!-- Preview Only -->
 	<div class="uid">WishSimulator.App</div>
 	<img
@@ -140,12 +182,12 @@
 	<!-- End Preview Only -->
 
 	{#if !standalone}
-		{#if list.length > 1 && !showResultList}
-			<button class="skip" on:click={skipHandle}>
+		{#if introPending || (list.length > 1 && !showResultList)}
+			<button class="skip" on:click={list.length === 1 ? finishElementReveal : skipHandle}>
 				{$t('wish.result.skip')} <i class="gi-caret-up" />
 			</button>
 		{:else}
-			<button class="close" on:click={closeHandle} in:fade={{ delay: 1500 }}>
+			<button class="close" on:click={closeHandle} in:fade={{ delay: elemental ? 0 : 1500 }}>
 				<i class="gi-close" />
 			</button>
 		{/if}
@@ -163,12 +205,13 @@
 			in:fade={{ duration: 500, delay: 200 }}
 		>
 			{#each list as { name, rarity, type, outfitName, vision, weaponType, bonusQty, bonusType, stelaFortuna, useOutfit, offset, custom }, i}
-				{#if activeIndex === i}
+				{#if activeIndex === i && (!elemental || elementStage === 'revealed')}
 					<div class="art-wrapper">
-						{#if !isSplashOut} <SplashLight type="in" {rarity} /> {/if}
+						{#if !elemental && !isSplashOut} <SplashLight type="in" {rarity} /> {/if}
 
 						<div class="art-wrapper">
 							<SplashArt
+								{elemental}
 								offset={offset?.splashArt}
 								{custom}
 								{name}
@@ -182,6 +225,7 @@
 						</div>
 
 						<ItemInfo
+							{elemental}
 							itemName={name}
 							{type}
 							{outfitName}
@@ -193,7 +237,7 @@
 							{custom}
 						/>
 						<WeaponBonus {type} {bonusQty} {bonusType} />
-						{#if isSplashOut} <SplashLight type="out" {rarity} /> {/if}
+						{#if !elemental && isSplashOut} <SplashLight type="out" {rarity} /> {/if}
 					</div>
 				{/if}
 			{/each}
@@ -201,7 +245,7 @@
 	{/if}
 
 	{#if !standalone}
-		{#if list[activeIndex].rarity > 3 || (showResultList && list.length > 1)}
+		{#if (!introPending && list[activeIndex].rarity > 3) || (showResultList && list.length > 1)}
 			<div class="share">
 				<ScreenshotShare canshare shareURL={createShareableLink(activeIndex, showResultList)} />
 			</div>
@@ -265,6 +309,8 @@
 	}
 
 	.zoomist-container {
+		position:relative;
+		z-index:1;
 		aspect-ratio: 1/1;
 	}
 	.art-wrapper {

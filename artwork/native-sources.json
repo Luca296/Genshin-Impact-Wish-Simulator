@@ -1,0 +1,266 @@
+[
+  {
+    "name": "flins",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Flins.png",
+    "path": "audit/hd/downloads/flins-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/flins-wish.png"
+  },
+  {
+    "name": "flins",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Flins.png",
+    "path": "audit/hd/downloads/flins-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/flins-portrait.png"
+  },
+  {
+    "name": "ineffa",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Ineffa.png",
+    "path": "audit/hd/downloads/ineffa-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/ineffa-wish.png"
+  },
+  {
+    "name": "ineffa",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Ineffa.png",
+    "path": "audit/hd/downloads/ineffa-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/ineffa-portrait.png"
+  },
+  {
+    "name": "skirk",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_SkirkNew.png",
+    "path": "audit/hd/downloads/skirk-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/skirk-wish.png"
+  },
+  {
+    "name": "skirk",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_SkirkNew.png",
+    "path": "audit/hd/downloads/skirk-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/skirk-portrait.png"
+  },
+  {
+    "name": "escoffier",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Escoffier.png",
+    "path": "audit/hd/downloads/escoffier-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/escoffier-wish.png"
+  },
+  {
+    "name": "escoffier",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Escoffier.png",
+    "path": "audit/hd/downloads/escoffier-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/escoffier-portrait.png"
+  },
+  {
+    "name": "arlecchino",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Arlecchino.png",
+    "path": "audit/hd/downloads/arlecchino-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/arlecchino-wish.png"
+  },
+  {
+    "name": "arlecchino",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Arlecchino.png",
+    "path": "audit/hd/downloads/arlecchino-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/arlecchino-portrait.png"
+  },
+  {
+    "name": "odette",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Odette.png",
+    "path": "audit/hd/downloads/odette-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/odette-wish.png"
+  },
+  {
+    "name": "odette",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Odette.png",
+    "path": "audit/hd/downloads/odette-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/odette-portrait.png"
+  },
+  {
+    "name": "vesna",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Vesna.png",
+    "path": "audit/hd/downloads/vesna-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/vesna-wish.png"
+  },
+  {
+    "name": "vesna",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Vesna.png",
+    "path": "audit/hd/downloads/vesna-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/vesna-portrait.png"
+  },
+  {
+    "name": "vodyanitsa",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Vodyanitsa.png",
+    "path": "audit/hd/downloads/vodyanitsa-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/vodyanitsa-wish.png"
+  },
+  {
+    "name": "vodyanitsa",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Vodyanitsa.png",
+    "path": "audit/hd/downloads/vodyanitsa-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/vodyanitsa-portrait.png"
+  },
+  {
+    "name": "alyosha",
+    "kind": "wish",
+    "url": "https://enka.network/ui/UI_Gacha_AvatarIcon_Alyosha.png",
+    "path": "audit/hd/downloads/alyosha-wish.png",
+    "status": 0,
+    "size": [
+      320,
+      1024
+    ],
+    "bundledSource": "artwork/native/alyosha-wish.png"
+  },
+  {
+    "name": "alyosha",
+    "kind": "portrait",
+    "url": "https://enka.network/ui/UI_AvatarIcon_Alyosha.png",
+    "path": "audit/hd/downloads/alyosha-portrait.png",
+    "status": 0,
+    "size": [
+      256,
+      256
+    ],
+    "bundledSource": "artwork/native/alyosha-portrait.png"
+  },
+  {
+    "name": "sandrone",
+    "kind": "wish",
+    "url": "https://game.genshin-wish-simulator.cc/internal/immutable/assets/sandrone-ac7482d3.webp",
+    "status": 0,
+    "bundledSource": "artwork/native/sandrone-wish.png",
+    "derivation": {
+      "source": "src/images/characters/splash-art/5star/sandrone.webp",
+      "crop": [
+        465,
+        0,
+        749,
+        909
+      ],
+      "resize": [
+        320,
+        1024
+      ]
+    },
+    "size": [
+      320,
+      1024
+    ]
+  },
+  {
+    "name": "sandrone",
+    "kind": "portrait",
+    "url": "https://game.genshin-wish-simulator.cc/internal/immutable/assets/sandrone-ac7482d3.webp",
+    "status": 0,
+    "bundledSource": "artwork/native/sandrone-portrait.png",
+    "derivation": {
+      "source": "src/images/characters/splash-art/5star/sandrone.webp",
+      "crop": [
+        520,
+        140,
+        740,
+        360
+      ],
+      "resize": [
+        256,
+        256
+      ]
+    },
+    "size": [
+      256,
+      256
+    ]
+  }
+]

@@ -1,0 +1,272 @@
+{
+  "to-the-looking-glass-the-mademoiselle-said-1": {
+    "caption": [
+      43,
+      66,
+      31,
+      29
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "starry-nights-whispers-3": {
+    "caption": [
+      43,
+      66,
+      23,
+      29
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "somnias-a-luna-2": {
+    "caption": [
+      42,
+      67,
+      32,
+      28
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "reign-of-serenity-7": {
+    "caption": [
+      30,
+      67,
+      44,
+      28
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "swans-shadow-in-silken-ice-1": {
+    "caption": [
+      43,
+      68,
+      23,
+      27
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "the-hearths-ashen-shadow-4": {
+    "caption": [
+      43,
+      68,
+      34,
+      27
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "the-lone-light-knocks-at-night-3": {
+    "caption": [
+      43,
+      68,
+      35,
+      27
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "astral-actuation-3": {
+    "caption": [
+      43,
+      68,
+      30,
+      27
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "when-warm-winds-cavort-1": {
+    "caption": [
+      48,
+      64,
+      22,
+      31
+    ],
+    "header": {
+      "headingTop": 11.5,
+      "availabilityTop": 36.5,
+      "eventTop": 53.3
+    }
+  },
+  "surging-ballad-1": {
+    "caption": [
+      48,
+      66,
+      35,
+      29
+    ],
+    "header": {
+      "headingTop": 21,
+      "availabilityTop": 36.5,
+      "eventTop": 53.3
+    }
+  },
+  "void-stars-advent-3": {
+    "caption": [
+      43,
+      69,
+      22,
+      26
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "la-chanson-cerise-3": {
+    "caption": [
+      43,
+      69,
+      30,
+      26
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "epitome-invocation-101": {
+    "caption": [
+      41,
+      70,
+      27,
+      26
+    ],
+    "rateup": [
+      71,
+      77,
+      24,
+      19
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "epitome-invocation-102": {
+    "caption": [
+      34,
+      73,
+      33,
+      23
+    ],
+    "rateup": [
+      70,
+      77,
+      26,
+      19
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "epitome-invocation-103": {
+    "caption": [
+      33,
+      76,
+      35,
+      20
+    ],
+    "rateup": [
+      70,
+      78,
+      25,
+      18
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "epitome-invocation-104": {
+    "caption": [
+      39,
+      76,
+      26,
+      20
+    ],
+    "rateup": [
+      83,
+      78,
+      16,
+      18
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  },
+  "epitome-invocation-105": {
+    "caption": [
+      40,
+      69,
+      31,
+      27
+    ],
+    "rateup": [
+      74,
+      72,
+      21,
+      24
+    ],
+    "header": {
+      "headingTop": 11.5,
+      "availabilityTop": 36.5,
+      "eventTop": 53.3
+    }
+  },
+  "epitome-invocation-106": {
+    "caption": [
+      34,
+      75,
+      32,
+      21
+    ],
+    "rateup": [
+      71,
+      80,
+      24,
+      16
+    ],
+    "header": {
+      "headingTop": 5,
+      "availabilityTop": 30,
+      "eventTop": 46.2
+    }
+  }
+}

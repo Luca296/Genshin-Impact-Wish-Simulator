@@ -23,12 +23,10 @@
 	import CustomEditor from '../_custom-banner/CustomEditor.svelte';
 	import ModalDelete from '../_custom-banner/ModalDelete.svelte';
 
-	$: landscape = $viewportWidth / 2.1 > $viewportHeight;
-	$: tabletBannerStyle = landscape ? 'width: 90vh' : '';
-
+	let availableHeight = 0;
 	$: mobileBannerStyle = $mobileMode
 		? `max-width: ${(150 / 100) * $viewportHeight}px;`
-		: tabletBannerStyle;
+		: '';
 
 	$: style =
 		$viewportHeight > 800 ||
@@ -121,7 +119,7 @@
 	});
 </script>
 
-<div class="banner-container" {style} class:editMode={$editBanner}>
+<div class="banner-container" style="{style};--banner-space-height:{availableHeight}px" bind:clientHeight={availableHeight} class:editMode={$editBanner}>
 	{#if $editBanner}
 		{#key $editID}
 			<div class="banner-item" style={mobileBannerStyle} in:fly={{ x: 25, duration: 580 }}>
@@ -212,11 +210,13 @@
 	}
 
 	.banner-item {
-		max-width: 900px;
-		width: 80%;
-		max-height: 75vh;
+		width: min(82%, calc(var(--banner-space-height) * 0.92 * 27 / 14));
 		aspect-ratio: 27/14;
 		perspective: 1000px;
+	}
+	:global(.mobile) .banner-item {
+		width:80%;
+		max-height:75vh;
 	}
 
 	.editMode .banner-item {

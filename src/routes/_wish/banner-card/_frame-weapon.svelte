@@ -1,10 +1,9 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import { t } from 'svelte-i18n';
-	import { course, mobileMode, activeVersion } from '$lib/store/app-stores';
+	import { course, activeVersion } from '$lib/store/app-stores';
 	import { positionToStyle } from '$lib/helpers/cssPosition';
 	import { highlightBannerName } from '$lib/helpers/nameText';
-	import EpitomizedButton from '../epitomized-path/WeaponButton.svelte';
 	import Dropnotes from './__dropnotes.svelte';
 
 	export let featured = {};
@@ -27,11 +26,7 @@
 		<Dropnotes element="epitome" banner="weapon-event" />
 	</div>
 
-	{#if $mobileMode}\
-		<div class="epitomized">
-			<EpitomizedButton />
-		</div>
-	{/if}
+
 
 	<div
 		class="featured"

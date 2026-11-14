@@ -12,10 +12,19 @@ import {
 } from './api-localstore';
 import { adKey } from '../accessKey';
 import { onlineBanner } from '../banner-custom';
+import { repairInventory, mergeRecord } from '../progression/engine';
+import { initializeProgression } from '../progression/migration';
 
 export const placeDataToAppDB = async (parsedFile, action) => {
+	const repaired = repairInventory(parsedFile.settings.data, parsedFile.histories);
+	parsedFile = {
+		...parsedFile,
+		settings: { ...parsedFile.settings, data: repaired.data },
+		histories: repaired.histories
+	};
 	if (action === 'replace') await replaceData(parsedFile);
 	if (action === 'merge') await mergeData(parsedFile);
+	await initializeProgression();
 
 	await setAccessKey(parsedFile.accessKey);
 };
@@ -51,8 +60,21 @@ const replaceData = async ({ settings, histories, banners } = {}) => {
 };
 
 const mergeData = async ({ settings, histories, banners } = {}) => {
+	await initializeProgression();
+	// Preflight modern progression before any mutation. Same-profile backups merge
+	// by stable copy ID and consumed-copy tombstones, never by adding quantities.
+	const current = owneditem.getAll();
+	const merged = { ...current };
+	for (const [id, record] of Object.entries(settings.data.ownedItem || {})) {
+		if (record.progressionVersion === 2)
+			merged[id] = mergeRecord(current[id] || { manual: 0, wish: 0, activated: 0 }, record);
+	}
 	await mergeCustomBanner(banners);
 	await mergeHistories(histories);
+	const final = owneditem.getAll();
+	for (const [id, record] of Object.entries(merged))
+		if (settings.data.ownedItem?.[id]?.progressionVersion === 2) final[id] = record;
+	storageLocal.set('ownedItem', final);
 	const updatedSettings = mergeSettings(settings.data);
 	updateSiteSettings(updatedSettings);
 };

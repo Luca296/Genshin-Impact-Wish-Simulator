@@ -1,7 +1,7 @@
 import { API_HOST, HOST } from '$lib/env';
 
 const imageModules = import.meta.glob(['@images/**/*'], {
-	query: { as: 'picture' },
+	as: 'url',
 	import: 'default',
 	eager: true
 });
@@ -12,8 +12,7 @@ export const itemList = () => {
 		const [keyName] = key.split('/').reverse();
 		const [keyNoExt] = keyName.split('.');
 
-		const { img = {} } = imageModules[key];
-		const { src = '' } = img;
+		const src = imageModules[key];
 
 		if (key.match(/face\//)) {
 			pathList[`face/${keyNoExt}`] = src;
@@ -174,29 +173,5 @@ export const base64ToBlob = (image) => {
 	return new Blob([byteArray], { type: contentType });
 };
 
-export const initCDNURL = async () => {
-	const check = document.head.querySelector('.imagecdn');
-	if (check) return;
-
-	try {
-		const loadScript = new Promise((resolve, reject) => {
-			const cdn = document.createElement('script');
-			cdn.crossOrigin = 'anonymous';
-			cdn.src = API_HOST + '/js/image-cdn';
-			cdn.classList.add('imagecdn');
-			document.head.append(cdn);
-
-			cdn.addEventListener('load', () => resolve('ok'));
-			cdn.addEventListener('error', () => reject('cannot use imagecdn'));
-		});
-		return loadScript;
-	} catch (e) {
-		console.log(e);
-	}
-};
-
-export const imageCDN = (imgs, width = 0) => {
-	if (!('getCDNImageURL' in window)) return imgs;
-	const finalURL = window.getCDNImageURL(imgs, width, HOST);
-	return finalURL;
-};
+export const initCDNURL = async () => {};
+export const imageCDN = (imgs) => imgs;

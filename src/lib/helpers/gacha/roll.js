@@ -1,3 +1,4 @@
+import { wishMode } from '../journal/mode';
 import { beginnerRemaining, showBeginner } from '$lib/store/app-stores';
 import { HistoryManager } from '../dataAPI/api-indexeddb';
 import { localPity, owneditem, rollCounter } from '../dataAPI/api-localstore';
@@ -12,7 +13,7 @@ const { addHistory } = HistoryManager;
  * @param {number} indexOfBanner Index Of active banner among the dual banner
  * @returns Wish Result Object
  */
-const roll = async (banner, WishInstance, indexOfBanner) => {
+const roll = async (banner, WishInstance, indexOfBanner, journalBatch, journalBatchSize) => {
 	const pity5 = localPity.get(`pity5-${banner}`) + 1;
 	const pity4 = localPity.get(`pity4-${banner}`) + 1;
 	const maxPity = getRate(banner, 'max5');
@@ -88,25 +89,30 @@ const roll = async (banner, WishInstance, indexOfBanner) => {
 	}
 
 	// Get Item
-	const randomItem = WishInstance.getItem(rarity, banner, indexOfBanner);
+	const randomItem = {
+		...WishInstance.getItem(rarity, banner, indexOfBanner),
+		journalMode: wishMode(WishInstance._version, banner),
+		journalBatch,
+		journalBatchSize
+	};
 	const { manual, wish } = owneditem.put({ itemID: randomItem.itemID });
 	const numberOfOwnedItem = manual + wish - 1;
 	const isNew = numberOfOwnedItem < 1;
 
 	// storing item to storage
-	await saveResult({ pity, ...randomItem });
+	const journalHistoryID = await saveResult({ pity, ...randomItem });
 
 	// Set Constellation
 	const isFullConstellation = numberOfOwnedItem > 6;
 	if (randomItem.type === 'character' && !isNew) {
-		randomItem.stelaFortuna = !isFullConstellation;
+		randomItem.stelaFortuna = true;
 	}
 
 	// Milestone Bonus (Stardust or Starglitter)
 	const bonusType = randomItem.rarity === 3 ? 'stardust' : 'starglitter';
 	const bonusQty = getMilestoneQty(randomItem.rarity, randomItem.type, isFullConstellation, isNew);
 
-	const result = { pity, isNew, bonusType, bonusQty, ...randomItem };
+	const result = { pity, isNew, bonusType, bonusQty, ...randomItem, journalHistoryID };
 	return result;
 };
 
@@ -115,7 +121,7 @@ const saveResult = async (result) => {
 	delete data.release;
 	delete data.limited;
 	delete data.offset;
-	await addHistory(data);
+	return await addHistory(data);
 };
 
 const getMilestoneQty = (rarity, type, isFullConstellation, isNew) => {

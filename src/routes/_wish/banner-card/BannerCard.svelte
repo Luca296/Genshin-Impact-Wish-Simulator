@@ -8,6 +8,8 @@
 	import FrameBeginner from './_frame-beginner.svelte';
 	import FrameCharacter from './_frame-character.svelte';
 	import FrameWeapon from './_frame-weapon.svelte';
+	import NativeBannerLabels from './NativeBannerLabels.svelte';
+	import EpitomizedButton from '../epitomized-path/WeaponButton.svelte';
 	import FrameStandard from './_frame-standard.svelte';
 	import FrameCustom from './_frame-custom.svelte';
 	import BannerImage from './_banner-image.svelte';
@@ -53,6 +55,7 @@
 	class:editor
 	class:fullscreenEditor
 	class:animate
+	class:layeredWeapon={type === 'weapon-event' && !data.bakedText}
 	class:safari={isSafari()}
 	bind:clientWidth
 	bind:clientHeight
@@ -101,7 +104,7 @@
 				wrapperClass="card-image skeleton-event"
 			/>
 			<div class="frame skeleton-event">
-				<FrameWeapon {featured} {rateup} {textOffset} />
+				{#if data.bakedText}<NativeBannerLabels {data} />{:else}<FrameWeapon {featured} {rateup} {textOffset} />{/if}
 			</div>
 
 			<!-- Character Banner -->
@@ -124,7 +127,7 @@
 				</div>
 			{/if}
 			<div class="frame skeleton-event">
-				<FrameCharacter {character} {textOffset} {bannerName} event2={index === 2} />
+				{#if data.bakedText}<NativeBannerLabels {data} event2={index === 2} />{:else}<FrameCharacter {character} {textOffset} {bannerName} event2={index === 2} />{/if}
 			</div>
 
 			<!-- Chronicled Banner -->
@@ -144,6 +147,9 @@
 			</div>
 		{/if}
 
+		{#if type === 'weapon-event'}
+			<div class="weapon-path"><EpitomizedButton responsive /></div>
+		{/if}
 		<div class="info">
 			<button class="detail" on:click={openDetails}> {$t('details.text')} </button>
 			{#if type !== 'beginner'}
@@ -258,6 +264,17 @@
 		display: flex;
 		align-items: center;
 		z-index: +10;
+	}
+	.weapon-path {
+		position: absolute;
+		left: 5%;
+		bottom: 13%;
+		width: 11%;
+		z-index: 11;
+	}
+	.layeredWeapon .weapon-path {
+		width: 8.5%;
+		bottom: 12%;
 	}
 
 	:global(.mobile) .info {

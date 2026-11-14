@@ -15,6 +15,8 @@ const meteorList = [
 ];
 
 export const check = async () => {
+	// Desktop media already ships in the application. Stream it directly from disk.
+	if (window.desktop) return safariMeteorLoader();
 	const loadedData = [];
 
 	// Load video from network directly if user use Safari browser

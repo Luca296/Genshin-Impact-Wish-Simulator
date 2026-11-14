@@ -1,5 +1,5 @@
 <script>
-	import { getContext } from 'svelte';
+	import { getContext, onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { t } from 'svelte-i18n';
 	import hotkeys from 'hotkeys-js';
@@ -10,6 +10,7 @@
 
 	import NoticeMark from '$lib/components/NoticeMark.svelte';
 	import EpitomizedIcon from './_icon.svelte';
+	export let responsive = false;
 
 	let buttonHeight;
 	let patch, phase, type, fatepointsystem;
@@ -25,23 +26,27 @@
 	};
 
 	// Shortcut
-	hotkeys('e', 'index', (e) => {
+	const shortcut = (e) => {
 		e.preventDefault();
 		if (!fatepointsystem || type !== 'weapon-event') return;
 		handleClick();
-	});
+	};
+	hotkeys('e', 'index', shortcut);
+	onDestroy(() => hotkeys.unbind('e', 'index', shortcut));
 </script>
 
 {#if fatepointsystem}
 	<button
 		class="container"
+		class:responsive
+		aria-label={$t('epitomizedPath.heading')}
 		style="--height:{buttonHeight}px"
 		in:fade={{ duration: 250 }}
 		on:click={handleClick}
 		bind:clientHeight={buttonHeight}
 	>
 		<NoticeMark name="fatepoint{patch}-{phase}" />
-		<EpitomizedIcon point={$course.point} {steps} />
+		<EpitomizedIcon point={$course.point} {steps} {responsive} />
 		<div class="point-number">
 			{#if $course.selected !== null}
 				<span>{$course.point}</span>/{steps}
@@ -56,6 +61,11 @@
 	button {
 		position: relative;
 		pointer-events: initial;
+	}
+	button.responsive {width:100%;margin:0;padding:0}
+	.responsive .point-number span.small {
+		font-size:clamp(9px,calc(0.101 * var(--height)),18px);
+		padding:1% 4%;
 	}
 
 	.point-number {

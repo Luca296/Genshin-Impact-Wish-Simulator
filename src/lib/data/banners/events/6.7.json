@@ -1,0 +1,139 @@
+{
+  "patch": 6.7,
+  "data": [
+    {
+      "phase": 1,
+      "banners": {
+        "standardVersion": 5,
+        "events": {
+          "featured": [
+            {
+              "bannerName": "to-the-looking-glass-the-mademoiselle-said-1",
+              "character": "sandrone",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            },
+            {
+              "bannerName": "starry-nights-whispers-3",
+              "character": "citlali",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            }
+          ],
+          "rateup": [
+            "beidou",
+            "diona",
+            "freminet"
+          ]
+        },
+        "weapons": {
+          "bannerName": "epitome-invocation-101",
+          "fatepointsystem": true,
+          "featured": [
+            {
+              "name": "a-teaspoon-of-transcendence"
+            },
+            {
+              "name": "starcallers-watch",
+              "buttonPosition": {
+                "l": 70
+              }
+            }
+          ],
+          "rateup": [
+            "favonius-sword",
+            "rainslasher",
+            "dragon_s-bane",
+            "sacrificial-fragments",
+            "sacrificial-bow"
+          ],
+          "textOffset": {
+            "featured": {
+              "l": 48.5,
+              "t": 71
+            },
+            "rateup": {
+              "l": 77.5,
+              "b": 16,
+              "w": 20
+            }
+          },
+          "bakedText": true
+        }
+      }
+    },
+    {
+      "phase": 2,
+      "banners": {
+        "standardVersion": 5,
+        "events": {
+          "featured": [
+            {
+              "bannerName": "somnias-a-luna-2",
+              "character": "columbina",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            },
+            {
+              "bannerName": "reign-of-serenity-7",
+              "character": "raiden-shogun",
+              "textOffset": {
+                "l": 50.5,
+                "b": 10.5
+              },
+              "bakedText": true
+            }
+          ],
+          "rateup": [
+            "jahoda",
+            "ororon",
+            "sethos"
+          ]
+        },
+        "weapons": {
+          "bannerName": "epitome-invocation-102",
+          "fatepointsystem": true,
+          "featured": [
+            {
+              "name": "nocturnes-curtain-call"
+            },
+            {
+              "name": "engulfing-lightning",
+              "buttonPosition": {
+                "l": 70
+              }
+            }
+          ],
+          "rateup": [
+            "waveriding-whirl",
+            "sacrificial-sword",
+            "the-bell",
+            "favonius-lance",
+            "favonius-warbow"
+          ],
+          "textOffset": {
+            "featured": {
+              "l": 48.5,
+              "t": 71
+            },
+            "rateup": {
+              "l": 77.5,
+              "b": 16,
+              "w": 20
+            }
+          },
+          "bakedText": true
+        }
+      }
+    }
+  ]
+}

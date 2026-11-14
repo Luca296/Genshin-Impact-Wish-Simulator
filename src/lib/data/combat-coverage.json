@@ -1,0 +1,2270 @@
+[
+  {
+    "name": "prune",
+    "localID": 10000132,
+    "gameID": 10000132,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "nicole",
+    "localID": 10000131,
+    "gameID": 10000131,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "lohen",
+    "localID": 10000133,
+    "gameID": 10000129,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "linnea",
+    "localID": 10000130,
+    "gameID": 10000130,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "varka",
+    "localID": 10000128,
+    "gameID": 10000128,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "illuga",
+    "localID": 10000127,
+    "gameID": 10000127,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "zibai",
+    "localID": 10000126,
+    "gameID": 10000126,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "columbina",
+    "localID": 10000125,
+    "gameID": 10000125,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "durin",
+    "localID": 10000123,
+    "gameID": 10000123,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "jahoda",
+    "localID": 10000124,
+    "gameID": 10000124,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "nefer",
+    "localID": 10000122,
+    "gameID": 10000122,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "aino",
+    "localID": 10000121,
+    "gameID": 10000121,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "flins",
+    "localID": 10000120,
+    "gameID": 10000120,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "lauma",
+    "localID": 10000119,
+    "gameID": 10000119,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "ineffa",
+    "localID": 10000116,
+    "gameID": 10000116,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "dahlia",
+    "localID": 10000115,
+    "gameID": 10000115,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "skirk",
+    "localID": 10000114,
+    "gameID": 10000114,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "ifa",
+    "localID": 10000113,
+    "gameID": 10000113,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "escoffier",
+    "localID": 10000112,
+    "gameID": 10000112,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "iansan",
+    "localID": 10000110,
+    "gameID": 10000110,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "varesa",
+    "localID": 10000111,
+    "gameID": 10000111,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "yumemizuki-mizuki",
+    "localID": 10000109,
+    "gameID": 10000109,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "lan-yan",
+    "localID": 10000108,
+    "gameID": 10000108,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "citlali",
+    "localID": 10000107,
+    "gameID": 10000107,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "mavuika",
+    "localID": 10000106,
+    "gameID": 10000106,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "chasca",
+    "localID": 10000104,
+    "gameID": 10000104,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "ororon",
+    "localID": 10000105,
+    "gameID": 10000105,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "xilonen",
+    "localID": 10000103,
+    "gameID": 10000103,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kinich",
+    "localID": 10000101,
+    "gameID": 10000101,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "mualani",
+    "localID": 10000102,
+    "gameID": 10000102,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kachina",
+    "localID": 10000100,
+    "gameID": 10000100,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "emilie",
+    "localID": 10000099,
+    "gameID": 10000099,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "sigewinne",
+    "localID": 10000095,
+    "gameID": 10000095,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "sethos",
+    "localID": 10000097,
+    "gameID": 10000097,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "clorinde",
+    "localID": 10000098,
+    "gameID": 10000098,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "arlecchino",
+    "localID": 10000096,
+    "gameID": 10000096,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "chiori",
+    "localID": 168,
+    "gameID": 10000094,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "gaming",
+    "localID": 166,
+    "gameID": 10000092,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "xianyun",
+    "localID": 165,
+    "gameID": 10000093,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "chevreuse",
+    "localID": 164,
+    "gameID": 10000090,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "navia",
+    "localID": 162,
+    "gameID": 10000091,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "furina",
+    "localID": 160,
+    "gameID": 10000089,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "charlotte",
+    "localID": 159,
+    "gameID": 10000088,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "wriothesley",
+    "localID": 71,
+    "gameID": 10000086,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "neuvillette",
+    "localID": 70,
+    "gameID": 10000087,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "freminet",
+    "localID": 69,
+    "gameID": 10000085,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "lynette",
+    "localID": 68,
+    "gameID": 10000083,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "lyney",
+    "localID": 67,
+    "gameID": 10000084,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kirara",
+    "localID": 66,
+    "gameID": 10000061,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "baizhu",
+    "localID": 65,
+    "gameID": 10000082,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kaveh",
+    "localID": 64,
+    "gameID": 10000081,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "mika",
+    "localID": 63,
+    "gameID": 10000080,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "dehya",
+    "localID": 62,
+    "gameID": 10000079,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "alhaitham",
+    "localID": 61,
+    "gameID": 10000078,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "yaoyao",
+    "localID": 60,
+    "gameID": 10000077,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "wanderer",
+    "localID": 59,
+    "gameID": 10000075,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "faruzan",
+    "localID": 58,
+    "gameID": 10000076,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "layla",
+    "localID": 57,
+    "gameID": 10000074,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "nahida",
+    "localID": 56,
+    "gameID": 10000073,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "nilou",
+    "localID": 55,
+    "gameID": 10000070,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "cyno",
+    "localID": 54,
+    "gameID": 10000071,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "candace",
+    "localID": 53,
+    "gameID": 10000072,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "dori",
+    "localID": 52,
+    "gameID": 10000068,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "tighnari",
+    "localID": 51,
+    "gameID": 10000069,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "collei",
+    "localID": 50,
+    "gameID": 10000067,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "shikanoin-heizou",
+    "localID": 49,
+    "gameID": 10000059,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kuki-shinobu",
+    "localID": 48,
+    "gameID": 10000065,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "yelan",
+    "localID": 47,
+    "gameID": 10000060,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kamisato-ayato",
+    "localID": 46,
+    "gameID": 10000066,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "yae-miko",
+    "localID": 45,
+    "gameID": 10000058,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "shenhe",
+    "localID": 44,
+    "gameID": 10000063,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "yun-jin",
+    "localID": 43,
+    "gameID": 10000064,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "arataki-itto",
+    "localID": 42,
+    "gameID": 10000057,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "gorou",
+    "localID": 41,
+    "gameID": 10000055,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "thoma",
+    "localID": 40,
+    "gameID": 10000050,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "sangonomiya-kokomi",
+    "localID": 39,
+    "gameID": 10000054,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "raiden-shogun",
+    "localID": 38,
+    "gameID": 10000052,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kujou-sara",
+    "localID": 37,
+    "gameID": 10000056,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "yoimiya",
+    "localID": 36,
+    "gameID": 10000049,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "sayu",
+    "localID": 35,
+    "gameID": 10000053,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kamisato-ayaka",
+    "localID": 34,
+    "gameID": 10000002,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kaedehara-kazuha",
+    "localID": 33,
+    "gameID": 10000047,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "eula",
+    "localID": 32,
+    "gameID": 10000051,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "yanfei",
+    "localID": 31,
+    "gameID": 10000048,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "rosaria",
+    "localID": 30,
+    "gameID": 10000045,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "hu-tao",
+    "localID": 29,
+    "gameID": 10000046,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "xiao",
+    "localID": 28,
+    "gameID": 10000026,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "ganyu",
+    "localID": 27,
+    "gameID": 10000037,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "albedo",
+    "localID": 26,
+    "gameID": 10000038,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "zhongli",
+    "localID": 25,
+    "gameID": 10000030,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "xinyan",
+    "localID": 24,
+    "gameID": 10000044,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "tartaglia",
+    "localID": 23,
+    "gameID": 10000033,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "diona",
+    "localID": 22,
+    "gameID": 10000039,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "klee",
+    "localID": 21,
+    "gameID": 10000029,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "venti",
+    "localID": 20,
+    "gameID": 10000022,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "keqing",
+    "localID": 19,
+    "gameID": 10000042,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "mona",
+    "localID": 18,
+    "gameID": 10000041,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "qiqi",
+    "localID": 17,
+    "gameID": 10000035,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "diluc",
+    "localID": 16,
+    "gameID": 10000016,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "jean",
+    "localID": 15,
+    "gameID": 10000003,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "sucrose",
+    "localID": 14,
+    "gameID": 10000043,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "chongyun",
+    "localID": 13,
+    "gameID": 10000036,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "noelle",
+    "localID": 12,
+    "gameID": 10000034,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "bennett",
+    "localID": 11,
+    "gameID": 10000032,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "fischl",
+    "localID": 10,
+    "gameID": 10000031,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "ningguang",
+    "localID": 9,
+    "gameID": 10000027,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "xingqiu",
+    "localID": 8,
+    "gameID": 10000025,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "beidou",
+    "localID": 7,
+    "gameID": 10000024,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "xiangling",
+    "localID": 6,
+    "gameID": 10000023,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "razor",
+    "localID": 5,
+    "gameID": 10000020,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "barbara",
+    "localID": 4,
+    "gameID": 10000014,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "lisa",
+    "localID": 3,
+    "gameID": 10000006,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "kaeya",
+    "localID": 2,
+    "gameID": 10000015,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "amber",
+    "localID": 1,
+    "gameID": 10000021,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "sandrone",
+    "localID": 10000134,
+    "gameID": 10000133,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "odette",
+    "localID": 10000135,
+    "gameID": 10000150,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "alyosha",
+    "localID": 10000136,
+    "gameID": 10000148,
+    "stats": true,
+    "talents": true,
+    "constellations": true,
+    "refinements": false
+  },
+  {
+    "name": "vesna",
+    "localID": 10000137,
+    "gameID": null,
+    "stats": false,
+    "talents": false,
+    "constellations": false,
+    "refinements": false
+  },
+  {
+    "name": "vodyanitsa",
+    "localID": 10000138,
+    "gameID": null,
+    "stats": false,
+    "talents": false,
+    "constellations": false,
+    "refinements": false
+  },
+  {
+    "name": "angelos-heptades",
+    "localID": 14523,
+    "gameID": 14523,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "disaster-and-remorse",
+    "localID": 90014523,
+    "gameID": 13517,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "golden-frostbound-oath",
+    "localID": 15516,
+    "gameID": 15516,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "gest-of-the-mighty-wolf",
+    "localID": 12515,
+    "gameID": 12515,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "lightbearing-moonshard",
+    "localID": 11519,
+    "gameID": 11519,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "nocturnes-curtain-call",
+    "localID": 14522,
+    "gameID": 14522,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "athame-artis",
+    "localID": 11518,
+    "gameID": 11518,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-daybreak-chronicles",
+    "localID": 15515,
+    "gameID": 15515,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "moonweavers-dawn",
+    "localID": 11434,
+    "gameID": 11434,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sacrificers-staff",
+    "localID": 13434,
+    "gameID": 13434,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "dawning-frost",
+    "localID": 14434,
+    "gameID": 14434,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "reliquary-of-truth",
+    "localID": 14521,
+    "gameID": 14521,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "bloodsoaked-ruins",
+    "localID": 13516,
+    "gameID": 13516,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "nightweavers-looking-glass",
+    "localID": 14520,
+    "gameID": 14520,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "fractured-halo",
+    "localID": 13515,
+    "gameID": 13515,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "azurelight",
+    "localID": 11517,
+    "gameID": 11517,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "symphonist-of-scents",
+    "localID": 13514,
+    "gameID": 13514,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "vivid-notions",
+    "localID": 14519,
+    "gameID": 14519,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sunny-morning-sleep-in",
+    "localID": 14518,
+    "gameID": 14518,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "starcallers-watch",
+    "localID": 14517,
+    "gameID": 14517,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "a-thousand-blazing-suns",
+    "localID": 12514,
+    "gameID": 12514,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "waveriding-whirl",
+    "localID": 14430,
+    "gameID": 14430,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "flower-wreathed-feathers",
+    "localID": 15430,
+    "gameID": 15430,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "astral-vultures-crimson-plumage",
+    "localID": 15514,
+    "gameID": 15514,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sturdy-bone",
+    "localID": 11430,
+    "gameID": 11430,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "fruitful-hook",
+    "localID": 12430,
+    "gameID": 12430,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "mountain-bracing-bolt",
+    "localID": 13430,
+    "gameID": 13430,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "peak-patrol-song",
+    "localID": 11516,
+    "gameID": 11516,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "fang-of-the-mountain-king",
+    "localID": 12513,
+    "gameID": 12513,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "surfs-up",
+    "localID": 14516,
+    "gameID": 14516,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "lumidouce-elegy",
+    "localID": 13513,
+    "gameID": 13513,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "silvershower-heartstrings",
+    "localID": 15513,
+    "gameID": 15513,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "absolution",
+    "localID": 11515,
+    "gameID": 11515,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "crimson_moon_s-semblance",
+    "localID": 13512,
+    "gameID": 13512,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "uraku-misugiri",
+    "localID": 169,
+    "gameID": 11514,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "cranes-echoing-call",
+    "localID": 167,
+    "gameID": 14515,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "verdict",
+    "localID": 163,
+    "gameID": 12512,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "splendor-of-tranquil-waters",
+    "localID": 161,
+    "gameID": 11513,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "prospector-drill",
+    "localID": 158,
+    "gameID": 13427,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "range-gauge",
+    "localID": 157,
+    "gameID": 15427,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "cashflow-supervision",
+    "localID": 156,
+    "gameID": 14513,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "portable-power-saw",
+    "localID": 155,
+    "gameID": 12427,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-dockhands-assistant",
+    "localID": 154,
+    "gameID": 11427,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "tome-of-the-eternal-flow",
+    "localID": 153,
+    "gameID": 14514,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-first-great-magic",
+    "localID": 152,
+    "gameID": 15512,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "jadefall-splendor",
+    "localID": 151,
+    "gameID": 14505,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "beacon-of-the-reed-sea",
+    "localID": 150,
+    "gameID": 12511,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "light-of-foliar-incision",
+    "localID": 149,
+    "gameID": 11512,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "tulaytullah_s-remembrance",
+    "localID": 148,
+    "gameID": 14512,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "a-thousand-floating-dreams",
+    "localID": 147,
+    "gameID": 14511,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "key-of-khaj-nisut",
+    "localID": 146,
+    "gameID": 11511,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "xiphos-moonlight",
+    "localID": 145,
+    "gameID": 11418,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "wandering-evenstar",
+    "localID": 144,
+    "gameID": 14416,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "staff-of-the-scarlet-sands",
+    "localID": 143,
+    "gameID": 13511,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "makhaira-aquamarine",
+    "localID": 142,
+    "gameID": 12415,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "hunter_s-path",
+    "localID": 141,
+    "gameID": 15511,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "aqua-simulacra",
+    "localID": 140,
+    "gameID": 15508,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "redhorn-stonethresher",
+    "localID": 139,
+    "gameID": 12510,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "haran-geppaku-futsu",
+    "localID": 138,
+    "gameID": 11510,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "kagura_s-verity",
+    "localID": 137,
+    "gameID": 14509,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "calamity-queller",
+    "localID": 136,
+    "gameID": 13507,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "mouun_s-moon",
+    "localID": 135,
+    "gameID": 15416,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "wavebreaker_s-fin",
+    "localID": 134,
+    "gameID": 13416,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "polar-star",
+    "localID": 133,
+    "gameID": 15507,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "akuoumaru",
+    "localID": 132,
+    "gameID": 12416,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "everlasting-moonglow",
+    "localID": 131,
+    "gameID": 14506,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "engulfing-lightning",
+    "localID": 130,
+    "gameID": 13509,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "thundering-pulse",
+    "localID": 129,
+    "gameID": 15509,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "mistsplitter-reforged",
+    "localID": 128,
+    "gameID": 11509,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "freedom-sworn",
+    "localID": 127,
+    "gameID": 11503,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "mitternachts-waltz",
+    "localID": 126,
+    "gameID": 15412,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "song-of-broken-pines",
+    "localID": 125,
+    "gameID": 12503,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "alley-hunter",
+    "localID": 124,
+    "gameID": 15410,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "elegy-for-the-end",
+    "localID": 123,
+    "gameID": 15503,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-alley-flash",
+    "localID": 122,
+    "gameID": 11410,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "wine-and-song",
+    "localID": 121,
+    "gameID": 14410,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "staff-of-homa",
+    "localID": 120,
+    "gameID": 13501,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "lithic-blade",
+    "localID": 119,
+    "gameID": 12410,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "lithic-spear",
+    "localID": 118,
+    "gameID": 13406,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "primordial-jade-cutter",
+    "localID": 117,
+    "gameID": 11505,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "primordial-jade-winged-spear",
+    "localID": 116,
+    "gameID": 13505,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "summit-shaper",
+    "localID": 115,
+    "gameID": 11504,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "vortex-vanquisher",
+    "localID": 114,
+    "gameID": 13504,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-unforged",
+    "localID": 113,
+    "gameID": 12504,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "memory-of-dust",
+    "localID": 112,
+    "gameID": 14504,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "eye-of-perception",
+    "localID": 111,
+    "gameID": 14409,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "rainslasher",
+    "localID": 110,
+    "gameID": 12405,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "rust",
+    "localID": 109,
+    "gameID": 15405,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "lost-prayer-to-the-sacred-winds",
+    "localID": 108,
+    "gameID": 14502,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "wolf_s-gravestone",
+    "localID": 107,
+    "gameID": 12502,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "amos-bow",
+    "localID": 106,
+    "gameID": 15502,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "aquila-favonia",
+    "localID": 105,
+    "gameID": 11501,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "skyward-pride",
+    "localID": 104,
+    "gameID": 12501,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "skyward-atlas",
+    "localID": 103,
+    "gameID": 14501,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "skyward-harp",
+    "localID": 102,
+    "gameID": 15501,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "skyward-spine",
+    "localID": 101,
+    "gameID": 13502,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "skyward-blade",
+    "localID": 100,
+    "gameID": 11502,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-flute",
+    "localID": 99,
+    "gameID": 11402,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-widsith",
+    "localID": 98,
+    "gameID": 14402,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "dragon_s-bane",
+    "localID": 97,
+    "gameID": 13401,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "lion_s-roar",
+    "localID": 96,
+    "gameID": 11405,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sacrificial-bow",
+    "localID": 95,
+    "gameID": 15403,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sacrificial-fragments",
+    "localID": 94,
+    "gameID": 14403,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sacrificial-greatsword",
+    "localID": 93,
+    "gameID": 12403,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sacrificial-sword",
+    "localID": 92,
+    "gameID": 11403,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "favonius-greatsword",
+    "localID": 91,
+    "gameID": 12401,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "favonius-sword",
+    "localID": 90,
+    "gameID": 11401,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "favonius-warbow",
+    "localID": 89,
+    "gameID": 15401,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "favonius-codex",
+    "localID": 88,
+    "gameID": 14401,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "favonius-lance",
+    "localID": 87,
+    "gameID": 13407,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-bell",
+    "localID": 86,
+    "gameID": 12402,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "the-stringless",
+    "localID": 85,
+    "gameID": 15402,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "black-tassel",
+    "localID": 84,
+    "gameID": 13303,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "bloodtained-greatsword",
+    "localID": 83,
+    "gameID": 12302,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "cool-steel",
+    "localID": 82,
+    "gameID": 11301,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "debate-club",
+    "localID": 81,
+    "gameID": 12305,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "emerald-orb",
+    "localID": 80,
+    "gameID": 14304,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "ferrous-shadow",
+    "localID": 79,
+    "gameID": 12301,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "harbinger-of-dawn",
+    "localID": 78,
+    "gameID": 11302,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "magic-guide",
+    "localID": 77,
+    "gameID": 14301,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "raven-bow",
+    "localID": 76,
+    "gameID": 15301,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "sharpshooter_s-oath",
+    "localID": 75,
+    "gameID": 15302,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "skyrider-sword",
+    "localID": 74,
+    "gameID": 11306,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "slingshot",
+    "localID": 73,
+    "gameID": 15304,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "thrilling-tales-of-dragon-slayers",
+    "localID": 72,
+    "gameID": 14302,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "a-teaspoon-of-transcendence",
+    "localID": 15517,
+    "gameID": 12516,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "whitelake-frostfeather",
+    "localID": 13517,
+    "gameID": 11520,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "crimson-moons-semblance",
+    "localID": 13518,
+    "gameID": 13512,
+    "stats": true,
+    "talents": false,
+    "constellations": false,
+    "refinements": true
+  },
+  {
+    "name": "beyond-the-chrysalis",
+    "localID": 11520,
+    "gameID": null,
+    "stats": false,
+    "talents": false,
+    "constellations": false,
+    "refinements": false
+  },
+  {
+    "name": "hymn-of-the-maelstrom",
+    "localID": 14524,
+    "gameID": null,
+    "stats": false,
+    "talents": false,
+    "constellations": false,
+    "refinements": false
+  },
+  {
+    "name": "new-bough",
+    "localID": 11435,
+    "gameID": null,
+    "stats": false,
+    "talents": false,
+    "constellations": false,
+    "refinements": false
+  },
+  {
+    "name": "winters-heavy-heart",
+    "localID": 14435,
+    "gameID": null,
+    "stats": false,
+    "talents": false,
+    "constellations": false,
+    "refinements": false
+  },
+  {
+    "name": "breezeborne-refrain",
+    "localID": 15431,
+    "gameID": null,
+    "stats": false,
+    "talents": false,
+    "constellations": false,
+    "refinements": false
+  }
+]
